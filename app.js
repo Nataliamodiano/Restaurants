@@ -9,12 +9,14 @@ function getApi(e) {
   // console.log(location);
 
   var xhr = new XMLHttpRequest();
+
   xhr.onload = function() {
     if (xhr.status === 200) {
       var response = JSON.parse(xhr.responseText);
-      console.log(response + 'hey');
+      console.log(response);
+      return(xhr);
       //postResponse(response);
-    };
+    } else {alert('broken');}
     
     // function postResponse(response) {
     //   var result = document.getElementById('result');
@@ -23,7 +25,7 @@ function getApi(e) {
     // };
   };
 
-  xhr.open('POST', '/yelp-api/' + find, true);
+  xhr.open('GET', 'http://localhost:8080/yelp-api/' + find, true);
   xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
   xhr.send(null);
 };
