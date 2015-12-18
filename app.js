@@ -18,10 +18,11 @@ function getApi(e) {
       for (i = 0; i < name.length; i++){
         console.log(name[i].name);
         var result = document.getElementById('result');
-        result.textContent = name[i].name;
-        // var newH2 = document.createElement('h2');
-        // var content = document.createTextNode(name[i].name);
-        // newH2.appendChild(content);
+        // result.textContent = name[i].name;
+        var newUl = document.createElement('li');
+        var content = document.createTextNode(name[i].name);
+        result.appendChild(newUl);
+        newUl.appendChild(content);
       };
       console.log(name);
     } else {alert('broken');}
