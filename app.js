@@ -4,33 +4,33 @@ submit.addEventListener('click', getApi, false);
 function getApi(e) {
   e.preventDefault();
   var find = document.getElementById('find').value;
-  console.log(find);
-  var category = document.getElementById('category').value || '';
-  console.log(category);
+  var category = document.getElementById('category').value || 'food';
   var location = document.getElementById('location').value;
-  console.log(location);
   var radius = document.getElementById('radius').value || '16000';
-  console.log(radius);
-  var sort = document.getElementById('sort').value;
-  console.log(sort);
+  var sort = document.getElementById('sort').value || '0';
 
   var xhr = new XMLHttpRequest();
-
   xhr.onload = function() {
     if (xhr.status === 200) {
       var response = JSON.parse(xhr.responseText);
       console.log(response);
       var name = response.businesses;
       for (i = 0; i < name.length; i++){
-        console.log(name[i].name);
         var result = document.getElementById('result');
-        // result.textContent = name[i].name;
-        var newUl = document.createElement('li');
-        var content = document.createTextNode(name[i].name);
-        result.appendChild(newUl);
-        newUl.appendChild(content);
+        var item = document.createElement('li');
+        var title = document.createElement('h3');
+        var paragraph = document.createElement('p');
+        var image = document.createElement('img');
+        image.setAttribute('src', name[i].rating_img_url);
+
+        title.textContent = name[i].name;
+        paragraph.textContent = ['This restaurant has a rating of ', name[i].rating, 'and a review count of ', name[i].review_count, '.'].join(' ');
+
+        result.appendChild(item);
+        item.appendChild(title);
+        item.appendChild(paragraph);
+        title.appendChild(image);
       };
-      console.log(name);
     } else {alert('broken');}
   };
 
