@@ -5,8 +5,14 @@ function getApi(e) {
   e.preventDefault();
   var find = document.getElementById('find').value;
   console.log(find);
+  var category = document.getElementById('category').value || '';
+  console.log(category);
   var location = document.getElementById('location').value;
   console.log(location);
+  var radius = document.getElementById('radius').value || '16000';
+  console.log(radius);
+  var sort = document.getElementById('sort').value;
+  console.log(sort);
 
   var xhr = new XMLHttpRequest();
 
@@ -28,7 +34,7 @@ function getApi(e) {
     } else {alert('broken');}
   };
 
-  xhr.open('GET', 'http://localhost:8080/yelp-api/' + find + '/' + location, true);
+  xhr.open('GET', 'http://localhost:8080/yelp-api/' + find + '/' + category + '/' + location + '/' + radius + '/' + sort, true);
   xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
   xhr.send(location);
 };

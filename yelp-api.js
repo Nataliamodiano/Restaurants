@@ -12,7 +12,7 @@ yelpRouter.use(function(req, res, next) {
   next();
 });
 
-yelpRouter.get('/:term/:location', function(req, res) {
+yelpRouter.get('/:term/:category/:location/:radius/:sort', function(req, res) {
   var myYelp = yelp.createClient({
       oauth: {
         consumer_key: 'xP7RInW8iBUfnxnKxFc4VQ',
@@ -25,9 +25,12 @@ yelpRouter.get('/:term/:location', function(req, res) {
     myYelp.search(
       {
         term: req.params.term,
+        category_filter: req.params.category,
+        location: req.params.location,
         limit: '20',
-        location: req.params.location
-        // category_filter: 'food, All'
+        sort: req.params.sort,
+        category_filter: 'food',
+        radius_filter: req.params.radius
       }).then(function (data) {
         res.send(data);
       }); 
