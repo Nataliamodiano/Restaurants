@@ -9,6 +9,10 @@ function getApi(e) {
   var radius = document.getElementById('radius').value || '16000';
   var sort = document.getElementById('sort').value || '0';
 
+  while (result.firstChild) {
+    result.removeChild(result.firstChild);
+  }
+
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
     if (xhr.status === 200) {
