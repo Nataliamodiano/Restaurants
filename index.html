@@ -2,6 +2,10 @@
 <html lang="en-us">
   <head>
     <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="default.css">
   </head>
   <body>
     <div>
@@ -9,10 +13,18 @@
       <input id="category" type="search" placeholder="Category: Mexican, Pizza">
       <input id="location" type="search" placeholder="Location: City, Zip Code">
       <input id="radius" type="search" placeholder="Radius in meters">
-      <input id="sort" type="search" placeholder="sort">
+      <select id="sort">
+        <option value="0" selected>Best Matched</option>
+        <option value="1">Distance</option> 
+        <option value="2">Highest Rated</option> 
+      </select>
       <button id="submit">Submit</button>
       <ul id="result"></ul>
     </div>
+    <div id="map"></div>
     <script src="app.js" type="text/javascript"></script>
+    <script src="map.js" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0OuluWj8gQFySi3QmUypDaUok5CCmVqM&callback=initMap">
+    </script>
   </body>
 </html>
