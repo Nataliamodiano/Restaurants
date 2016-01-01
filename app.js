@@ -51,23 +51,16 @@ function getApi(e) {
       console.log(response);
       var name = response.businesses;
 
-
+      var geocoder = new google.maps.Geocoder();
       var address = document.getElementById('location').value;
-      geocoder.geocode({'address': address}, function(results, status) {
-        if (status === google.maps.GeocoderStatus.OK) {
-          resultsMap.setCenter(results[0].geometry.location);
-          // var marker = new google.maps.Marker({
-          //   map: resultsMap,
-          //   position: results[0].geometry.location
-          }
-        });
 
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: results[0].geometry.location,
+        zoom: 11,
+        center: {lat: 34.052235, lng: -118.243683},
         scrollwheel: false
       });
-
+      geocodeAddress(geocoder,map);
+      console.log(name.length)
       //loop through all names in the yelp array
       for (i = 0; i < name.length; i++){
         var result = document.getElementById('result');
@@ -95,7 +88,7 @@ function getApi(e) {
         var marker = new google.maps.Marker({
           position: latLong,
           map: map,
-          title: 'hi'
+          title: name[i].name
         });
 
       }
