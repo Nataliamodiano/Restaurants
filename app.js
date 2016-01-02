@@ -1,6 +1,8 @@
+//get access to submit button and add event listener on click
 var submit = document.getElementById('submit');
 submit.addEventListener('click', getApi, false);
 
+//initiate the map with the center of Los Angeles
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
@@ -13,16 +15,12 @@ function initMap() {
   });
 }
 
+//defined geocode function
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementById('location').value;
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location);
-      // var marker = new google.maps.Marker({
-      //   map: resultsMap,
-      //   position: results[0].geometry.location
-      // });
-      console.log(address);
     } else {
       alert('Geocode was not successful for the following reason: ' + status);
     }
@@ -36,7 +34,7 @@ function getApi(e) {
   var find = document.getElementById('find').value;
   var category = document.getElementById('category').value || 'food';
   var location = document.getElementById('location').value;
-  var radius = document.getElementById('radius').value || '16000';
+  var radius = document.getElementById('radius').value || '4828.03';
   var sort = document.getElementById('sort').value || '0';
 
   //clear previous search results 
@@ -47,20 +45,20 @@ function getApi(e) {
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
     if (xhr.status === 200) {
+      //parsed the response text and got access to the businesses
       var response = JSON.parse(xhr.responseText);
-      console.log(response);
       var name = response.businesses;
 
+      //geocoded the location that is entered to become the new center of the map
       var geocoder = new google.maps.Geocoder();
       var address = document.getElementById('location').value;
-
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 11,
+        zoom: 12,
         center: {lat: 34.052235, lng: -118.243683},
         scrollwheel: false
       });
       geocodeAddress(geocoder,map);
-      console.log(name.length)
+
       //loop through all names in the yelp array
       for (i = 0; i < name.length; i++){
         var result = document.getElementById('result');
@@ -85,14 +83,16 @@ function getApi(e) {
         var latLong = {lat: latitude, lng: longitude};
         console.log(latLong);
 
+        //drop marker for every business name
         var marker = new google.maps.Marker({
           position: latLong,
           map: map,
           title: name[i].name
         });
-
       }
-    } else {alert('Make sure you entered Find and Location values');}
+    } else {
+        alert('Make sure you entered Find and Location values');
+      }
   }
 
   xhr.open('GET', 'http://localhost:8080/yelp-api/' + find + '/' + category + '/' + location + '/' + radius + '/' + sort, true);
