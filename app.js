@@ -2,6 +2,16 @@
 var submit = document.getElementById('submit');
 submit.addEventListener('click', getApi, false);
 
+// submit.addEventListener('keyup', keyEvent, false);
+
+// function keyEvent(event) {
+//   var key = event.keyCode || event.which;
+//   var keychar = String.fromCharCode(key);
+//   if (key == 13) {
+//     metaChar = true;
+//   } else {console.log('broken');}
+// }
+
 //initiate the map with the center of Los Angeles
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -69,7 +79,7 @@ function getApi(e) {
         image.setAttribute('src', name[i].rating_img_url);
 
         title.textContent = name[i].name;
-        paragraph.textContent = ['This restaurant has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '.'].join('');
+        paragraph.textContent = ['This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '.'].join('');
 
         //append results to the page
         result.appendChild(item);
@@ -81,13 +91,17 @@ function getApi(e) {
         var latitude = name[i].location.coordinate.latitude;
         var longitude = name[i].location.coordinate.longitude;
         var latLong = {lat: latitude, lng: longitude};
-        console.log(latLong);
+
+        var labels = '1234567890';
+        var labelIndex = 0;
 
         //drop marker for every business name
         var marker = new google.maps.Marker({
           position: latLong,
           map: map,
-          title: name[i].name
+          animation: google.maps.Animation.DROP,
+          title: name[i].name,
+          label: labels[labelIndex++ % labels.length]
         });
       }
     } else {

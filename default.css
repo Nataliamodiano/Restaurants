@@ -1,5 +1,58 @@
-#map { 
-  height: 400px;
-  width: 600px; 
+
+#container {
+  width: 1200px;
+  margin: 0px auto;
 }
 
+#map { 
+  height: 500px; 
+  display: block;
+}
+
+#result {
+  display: block;
+  width: 600px; 
+  height: 500px;
+  overflow: scroll;
+  background-color: blue,
+}
+
+#search-bar {
+  width: 100%;
+}
+
+@media screen and (max-width:1199px) {
+  #container{
+    width: 100%;
+  }
+
+  #map { 
+    height: 400px;
+    width: 50%; 
+    display: block;
+  }
+
+  #result {
+    display: block;
+    width: 50%; 
+    background-color: blue,
+  }
+}
+
+@media screen and (max-width:767px) {
+  #container{
+    width: 100%;
+  }
+
+  #map { 
+    height: 400px;
+    width: 100%; 
+    display: block;
+  }
+
+  #result {
+    display: block;
+    width: 100%; 
+    background-color: blue,
+  }
+}

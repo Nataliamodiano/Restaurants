@@ -1,10 +1,7 @@
 var express = require('express');
 var yelpRouter = express.Router();
-var bodyParser = require('body-parser');
-var textParser = bodyParser.text();
 var request = require('request');
 var Promise = require('bluebird');
-var _ = require('lodash');
 var yelp = require('node-yelp');
 
 yelpRouter.use(function(req, res, next) {

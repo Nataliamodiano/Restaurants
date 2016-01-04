@@ -4,10 +4,11 @@
     <title></title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="default.css">
   </head>
-  <body>
-    <div>
+  <body class="container">
+    <div id="search-bar">
       <input id="find" type="search" placeholder="Find: tacos, dinner, restaurant name">
       <input id="category" type="search" placeholder="Category: Mexican, Pizza">
       <input id="location" type="search" placeholder="Location: City, Zip Code">
@@ -18,9 +19,12 @@
         <option value="2">Highest Rated</option> 
       </select>
       <button id="submit">Submit</button>
-      <ol id="result"></ol>
+      <!-- <ol id="result"></ol> -->
     </div>
-    <div id="map"></div>
+    <div class="row">
+      <ol id="result" class="col-sm-6"></ol>
+      <div id="map" class"col-sm-6"></div>
+    </div>
     <script src="app.js" type="text/javascript"></script>
     <!-- <script src="map.js" type="text/javascript"></script> -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0OuluWj8gQFySi3QmUypDaUok5CCmVqM&callback=initMap">
