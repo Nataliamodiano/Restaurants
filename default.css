@@ -39,7 +39,7 @@
 }
 
 .input {
-  width: 18%;
+  width: 23%;
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
   padding: 2px 2px 2px 5px;
@@ -80,7 +80,7 @@
 
 @media screen and (max-width:1155px) {
   .input {
-    width: 17%;
+    width: 22.5%;
     padding: 2px 2px 2px 5px;
   }
 }
