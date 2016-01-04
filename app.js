@@ -42,7 +42,6 @@ function getApi(e) {
   e.preventDefault();
   //get search box values
   var find = document.getElementById('find').value;
-  var category = document.getElementById('category').value || 'food';
   var location = document.getElementById('location').value;
   var radius = document.getElementById('radius').value || '4828.03';
   var sort = document.getElementById('sort').value || '0';
@@ -110,7 +109,7 @@ function getApi(e) {
       }
   }
 
-  xhr.open('GET', 'http://localhost:8080/yelp-api/' + find + '/' + category + '/' + location + '/' + radius + '/' + sort, true);
+  xhr.open('GET', 'http://localhost:8080/yelp-api/' + find + '/' + location + '/' + radius + '/' + sort, true);
   xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
   xhr.send(location);
 }
