@@ -7,6 +7,7 @@
 #map { 
   height: 500px; 
   display: block;
+  border: 2px solid black;
 }
 
 #result {
@@ -14,7 +15,8 @@
   width: 600px; 
   height: 500px;
   overflow: scroll;
-  background-color: blue,
+  border: 2px solid black;
+  padding-left: 30px;
 }
 
 #search-bar {

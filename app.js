@@ -73,7 +73,7 @@ function getApi(e) {
       for (i = 0; i < name.length; i++){
         var result = document.getElementById('result');
         var item = document.createElement('li');
-        var title = document.createElement('h3');
+        var title = document.createElement('h4');
         var paragraph = document.createElement('p');
         var image = document.createElement('img');
         image.setAttribute('src', name[i].rating_img_url);
@@ -92,7 +92,11 @@ function getApi(e) {
         var longitude = name[i].location.coordinate.longitude;
         var latLong = {lat: latitude, lng: longitude};
 
-        var labels = '1234567890';
+        // for (j = 1; j < 21; j++){
+        //   var labels = j;
+        //   console.log(labels);
+        // }
+        var labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
         var labelIndex = 0;
 
         //drop marker for every business name
@@ -101,7 +105,7 @@ function getApi(e) {
           map: map,
           animation: google.maps.Animation.DROP,
           title: name[i].name,
-          label: labels[labelIndex++ % labels.length]
+          label: labels[i][labelIndex++ % labels.length],
         });
       }
     } else {
