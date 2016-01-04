@@ -92,10 +92,7 @@ function getApi(e) {
         var longitude = name[i].location.coordinate.longitude;
         var latLong = {lat: latitude, lng: longitude};
 
-        // for (j = 1; j < 21; j++){
-        //   var labels = j;
-        //   console.log(labels);
-        // }
+        // added letters to markers
         var labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
         var labelIndex = 0;
 
@@ -105,7 +102,7 @@ function getApi(e) {
           map: map,
           animation: google.maps.Animation.DROP,
           title: name[i].name,
-          label: labels[i][labelIndex++ % labels.length],
+          label: labels[i][labelIndex++ % labels.length]
         });
       }
     } else {

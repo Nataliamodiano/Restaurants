@@ -1,13 +1,27 @@
-
-#container {
+.container {
   width: 1200px;
   margin: 0px auto;
+  padding: 0px 0px 0px 0px;
+}
+
+.row {
+  width: 1200px;
+  margin: 0px 0px 0px 0px;
+}
+
+#hero-image {
+  height: 300px;
+  width: 100%;
+  background-image: url(images/restaurant-image.jpg);
+  background-position: center -150px;
+  background-repeat: no-repeat; 
 }
 
 #map { 
   height: 500px; 
   display: block;
   border: 2px solid black;
+  margin-left: 20px;
 }
 
 #result {
@@ -17,32 +31,62 @@
   overflow: scroll;
   border: 2px solid black;
   padding-left: 30px;
+  margin-right: 20px;
 }
 
 #search-bar {
   width: 100%;
 }
 
+.input {
+  width: 18%;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  padding: 2px 2px 2px 5px;
+}
+
+#submit {
+  display: block;
+  margin-left:auto;
+  margin-right:auto; 
+  width: 300px;
+  margin-bottom: 40px;
+}
+
 @media screen and (max-width:1199px) {
-  #container{
+  .container {
     width: 100%;
   }
 
+  .row {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
   #map { 
-    height: 400px;
+    height: 500px;
     width: 50%; 
     display: block;
+    margin-left: 0px;
   }
 
   #result {
     display: block;
     width: 50%; 
-    background-color: blue,
+    margin-right: 0px;
   }
 }
 
-@media screen and (max-width:767px) {
-  #container{
+@media screen and (max-width:1155px) {
+  .input {
+    width: 17%;
+    padding: 2px 2px 2px 5px;
+  }
+}
+
+@media screen and (max-width:770px) {
+  .container {
     width: 100%;
   }
 
@@ -55,6 +99,10 @@
   #result {
     display: block;
     width: 100%; 
-    background-color: blue,
+  }
+  .input {
+    width: 98%;
+    margin: 10px 10px 10px 10px;
+    padding: 2px 2px 2px 5px;
   }
 }

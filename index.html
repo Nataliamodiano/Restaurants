@@ -8,24 +8,29 @@
     <link rel="stylesheet" href="default.css">
   </head>
   <body class="container">
+    <!-- hero image -->
+    <div id="hero-image" alt="Image of a restaurant."></div>
+    <!-- search bars -->
     <div id="search-bar">
-      <input id="find" type="search" placeholder="Find: tacos, dinner, restaurant name">
-      <input id="category" type="search" placeholder="Category: Mexican, Pizza">
-      <input id="location" type="search" placeholder="Location: City, Zip Code">
-      <input id="radius" type="search" placeholder="Radius in meters">
-      <select id="sort">
+      <input class="input" id="find" type="search" placeholder="Find: tacos, dinner">
+      <input class="input" id="category" type="search" placeholder="Category: Mexican, Pizza">
+      <input class="input" id="location" type="search" placeholder="Location: City, Zip Code">
+      <input class="input" id="radius" type="search" placeholder="Radius in meters">
+      <select class="input" id="sort">
         <option value="0" selected>Best Matched</option>
         <option value="1">Distance</option> 
         <option value="2">Highest Rated</option> 
-      </select>
-      <button id="submit">Submit</button>
+      </select></br>
+      <button class="input" id="submit">Submit</button>
     </div>
+    <!-- map and search results -->
     <div class="row">
-      <ol id="result" class="col-sm-6" type="A">
+      <ol class="col-sm-6" id="result" type="A">
         <h4>Search results:</h4>
       </ol>
-      <div id="map" class"col-sm-6"></div>
+      <div class"col-sm-6" id="map"></div>
     </div>
+    <!-- javascript -->
     <script src="app.js" type="text/javascript"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0OuluWj8gQFySi3QmUypDaUok5CCmVqM&callback=initMap">
     </script>
