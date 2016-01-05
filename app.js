@@ -78,8 +78,8 @@ function getApi(e) {
         image.setAttribute('src', name[i].rating_img_url);
 
         title.textContent = name[i].name;
-        paragraph.textContent = ['This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '.'].join('');
-
+        paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '.'].join('');
+        item.className += "new-li"; 
         //append results to the page
         result.appendChild(item);
         item.appendChild(title);
