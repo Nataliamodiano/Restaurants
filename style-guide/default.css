@@ -1,0 +1,63 @@
+.logo {
+  font-family: 'Rock Salt', cursive;
+  font-size: 72px;
+  text-align: center;
+  margin-top: 20px;
+  color: #DE1500;
+  background-color: #1B0B0A;
+  padding: 20px 20px 20px 20px;
+}
+
+.header {
+  font-family: 'Nunito', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  color: #a00f00;
+}
+
+.content {
+  font-family: 'Asar', serif;
+  font-size: 24px;
+  text-align: center;
+  color: #1B0B0A;
+}
+
+.color-one {
+  position: relative;
+  display: inline-block;
+  background-color: #a00f00;
+}
+
+.color-two {
+  position: relative;
+  display: inline-block;
+  background-color: #DE1500;
+}
+
+.color-three {
+  position: relative;
+  display: inline-block;
+  background-color: #ffffff;
+}
+
+.color-four {
+  position: relative;
+  display: inline-block;
+  background-color: #1B0B0A;
+  color: #fff;
+}
+
+.color-five {
+  position: relative;
+  display: inline-block;
+  background-color: #f5f5f1;
+}
+
+
+.square {
+  height: 200px;
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+}
