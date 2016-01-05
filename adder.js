@@ -1,8 +1,7 @@
 var addRestaurant = document.getElementById('add-restaurant');
-addRestaurant.addEventListener('click', addName, false);
+addRestaurant.addEventListener('click', typeName, false);
 
-function addName() {
-
+function typeName() {
   // get value from input and add it to list
   var restaurantName = document.getElementById('restaurant-name').value;
   var restaurantList = document.getElementById('restaurant-list');
@@ -20,12 +19,35 @@ function addName() {
   function removeItem() {
     restaurantList.removeChild(item);
   }
+  //delete input value
   document.getElementById('restaurant-name').value = null;
-};
+
+  //add text box for notes 
+  //create a notes button and have it toggle a text area 
+  var notes = document.createElement('textarea');
+  var notesButton = document.createElement('input');
+  notesButton.setAttribute('type', 'button');
+  notesButton.setAttribute('value', 'Add Notes');
+  item.appendChild(notesButton);
+  item.appendChild(notes);
+  notes.setAttribute('class', 'collapse');
+  notesButton.addEventListener('click', toggleNotes, false);
+  function toggleNotes() {
+    
+    if (notes.className === 'collapse'){
+      notes.setAttribute('class', 'collapse in');
+    } 
+    else if (notes.className === 'collapse in'){
+      notes.setAttribute('class', 'collapse');
+    }
+    else {
+      console.log('You got the wrong note');
+    }
+  }
+}
 
 // get value of item clicked on in search result list
 result.addEventListener('click', function(e) {
-  //ar newLi = document.getElementsByClassName('new-li');
   e = e || window.event;
   var target = e.path[1],
   text = target.textContent || text.innerText;
