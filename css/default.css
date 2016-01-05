@@ -2,7 +2,6 @@
   width: 1200px;
   margin: 0px auto;
   padding: 0px 0px 0px 0px;
-  background-color: 
 }
 
 .row {
@@ -13,7 +12,7 @@
 #hero-image {
   height: 300px;
   width: 100%;
-  background-image: url(../images/restaurant-image.jpg);
+  background-image: url(images/restaurant-image.jpg);
   background-position: center -150px;
   background-repeat: no-repeat; 
 }
