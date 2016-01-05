@@ -23,7 +23,6 @@ function typeName() {
   document.getElementById('restaurant-name').value = null;
 
   //add text box for notes 
-  //create a notes button and have it toggle a text area 
   var notes = document.createElement('textarea');
   var notesButton = document.createElement('input');
   notesButton.setAttribute('type', 'button');
@@ -66,6 +65,28 @@ result.addEventListener('click', function(e) {
   remove.addEventListener('click', removeItem, false);
   function removeItem() {
     restaurantList.removeChild(item);
+  }
+
+  //add text box for notes 
+  var notes = document.createElement('textarea');
+  var notesButton = document.createElement('input');
+  notesButton.setAttribute('type', 'button');
+  notesButton.setAttribute('value', 'Add Notes');
+  item.appendChild(notesButton);
+  item.appendChild(notes);
+  notes.setAttribute('class', 'collapse');
+  notesButton.addEventListener('click', toggleNotes, false);
+  function toggleNotes() {
+    
+    if (notes.className === 'collapse'){
+      notes.setAttribute('class', 'collapse in');
+    } 
+    else if (notes.className === 'collapse in'){
+      notes.setAttribute('class', 'collapse');
+    }
+    else {
+      console.log('You got the wrong note');
+    }
   }
 }, false);
 
