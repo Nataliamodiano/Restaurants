@@ -17,35 +17,35 @@
         <div id="logo">Lets Eat...</div>
       </div>
       <!-- hero image -->
-      <div id="hero-image" alt="Image of a restaurant."></div>
+      <img class="img-responsive" src="images/toms-restaurant.jpg" alt="Image of a restaurant.">
 
       <!-- product description -->
       <div class="container">
-        <div class="row">
-          <div class="title h1">Struggle with finding places to eat?</div>
-          <h2 class="title">Use Lets Eat... to create a list of restaurants for readily available options.</h2> 
-          <div class="row">
-            <h1 class="title">What is Lets Eat...</h1>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-              <div class="col-sm-12 col-md-4">
-                <img class="center-block" src="" alt=""></img>
-                <h2 class="title">Search</h2>
-                <p class="description">Search for types of food or restaurants in a city you desire.</p>
-              </div>
-              <div class="col-sm-12 col-md-4">
-                <img class="center-block" src="" alt=""></img>
-                <h2 class="title">View</h2>
-                <p class="description">View search results and their markers on Google Maps.</p>
-              </div>
-              <div class="col-sm-12 col-md-4">
-                <img class="center-block" src="" alt=""></img>
-                <h2 class="title">Click</h2>
-                <p class="description">Click on restaurant names to view their yelp page and add them to your list of restaurants you would like to visit in the future.</p>
-              </div>
+        <div class="row" id="hook">
+          <div class="title h1 hook-type">Struggle with finding places to eat?</div>
+          <h2 class="title hook-type">Use Lets Eat... to create a list of restaurants for readily available options.</h2> 
+        </div>
+        <div class="row" id="product-description">
+          <h1 class="title" id="what-is">What is Lets Eat...</h1>
+          <div class="col-sm-12 col-md-1"></div>
+          <div class="col-sm-12 col-md-10">
+            <div class="col-sm-12 col-md-4 row-one">
+              <img class="center-block" src="images/search.png" alt="magnifying glass icon"></img>
+              <h2 class="title" id="search">Search</h2>
+              <p class="description">Search for types of food or restaurants in a city you desire.</p>
             </div>
-            <div class="col-sm-2"></div>
+            <div class="col-sm-12 col-md-4" id="row-two">
+              <img class="center-block" src="images/view.png" alt="glasses icon"></img>
+              <h2 class="title" id="view">View</h2>
+              <p class="description">View search results and their markers on Google Maps.</p>
+            </div>
+            <div class="col-sm-12 col-md-4 row-one">
+              <img class="center-block" src="images/click.png" alt="mouse click icon"></img>
+              <h2 class="title">Click</h2>
+              <p class="description">Click on restaurant names to view their yelp page and add them to your list of restaurants you would like to visit in the future.</p>
+            </div>
           </div>
+          <div class="col-sm-12 col-md-1"></div>
         </div>
       </div>
 
@@ -70,7 +70,8 @@
       </div>
       <!-- list of selections -->
       <ul id="restaurant-list">
-        <h3 class="title">Lets eat at...</h3>
+        <div class="title h1">Lets eat at...</div>
+        <h3 id="my-list">My List</h3>
         <input class="input" id="restaurant-name" type="text" placeholder="Restaurant name">
         <button id="add-restaurant">Add Restaurant</button>
       </ul>

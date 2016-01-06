@@ -76,13 +76,16 @@ function getApi(e) {
         var paragraph = document.createElement('p');
         var image = document.createElement('img');
         image.setAttribute('src', name[i].rating_img_url);
-
+        image.setAttribute('class', 'rating');
+        //add yelp link to h4 title
         title.setAttribute('href', name[i].mobile_url);
-        title.setAttribute('class', 'h4');
+        title.setAttribute('class', 'restaurant');
         title.setAttribute('target', '_blank');
         title.textContent = name[i].name;
-        paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '.'].join('');
+        paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '. Address and phone number: ', name[i].location.address, '. ', name[i].location.city, ', ', name[i].display_phone, '.'].join('');
         item.className += "new-li"; 
+
+        paragraph.setAttribute('class', 'location');
         //append results to the page
         result.appendChild(item);
         item.appendChild(title);
@@ -98,18 +101,35 @@ function getApi(e) {
         var labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
         var labelIndex = 0;
 
+
+
+        var icon1 = "images/icon.png";
+        var icon2 = "images/alt-icon.png";
         //drop marker for every business name
         var marker = new google.maps.Marker({
           position: latLong,
           map: map,
           animation: google.maps.Animation.DROP,
           title: name[i].name,
-          label: labels[i][labelIndex++ % labels.length]
+          label: labels[i][labelIndex++ % labels.length],
+          icon: icon1,
         });
+        
+        //highlight marker
+        google.maps.event.addListener(marker, 'mouseover', function() {
+          this.setIcon(icon2);
+        });
+        google.maps.event.addListener(marker, 'mouseout', function() {
+          this.setIcon(icon1);
+        });
+
+
+
       }
     } else {
         alert('Make sure you entered Find and Location values');
       }
+
   }
 
   xhr.open('GET', 'http://localhost:8080/yelp-api/' + find + '/' + location + '/' + radius + '/' + sort, true);
