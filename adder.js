@@ -50,8 +50,10 @@ function typeName() {
 // get value of item clicked on in search result list
 result.addEventListener('click', function(e) {
   e = e || window.event;
-  var target = e.path[1],
+  var target = e.path[2];
   text = target.textContent || text.innerText;
+console.log(e);
+  console.log(e.path[2]);
   // append the item clicked on to the list
   var restaurantList = document.getElementById('restaurant-list');
   var item = document.createElement('li');
@@ -60,9 +62,16 @@ result.addEventListener('click', function(e) {
   remove.setAttribute('type', 'button');
   remove.setAttribute('value', 'Delete');
   title.textContent = text;
-  restaurantList.appendChild(item);
+  
   item.appendChild(title);
   item.appendChild(remove);
+  
+  if (e.path[2].className === 'new-li') {
+    restaurantList.appendChild(item);
+  } else {
+    console.log('broken');
+  }
+
   //delete item on button click
   remove.addEventListener('click', removeItem, false);
   function removeItem() {

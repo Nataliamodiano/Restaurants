@@ -82,14 +82,18 @@ function getApi(e) {
         title.setAttribute('class', 'restaurant');
         title.setAttribute('target', '_blank');
         title.textContent = name[i].name;
-        paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '. Address and phone number: ', name[i].location.address, '. ', name[i].location.city, ', ', name[i].display_phone, '.'].join('');
-        item.className += "new-li"; 
-
+        
+        var addLink = document.createElement('a');
+        addLink.textContent = 'Click here to add this restaurant to your list!';
+        paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '. Address and phone number: ', name[i].location.address, '. ', name[i].location.city, ', ', name[i].display_phone, '. '].join('');
+        paragraph.appendChild(addLink);
         paragraph.setAttribute('class', 'location');
+
         //append results to the page
         result.appendChild(item);
         item.appendChild(title);
         item.appendChild(paragraph);
+        item.className += "new-li"; 
         title.appendChild(image);
 
         //get coordinates
@@ -101,8 +105,7 @@ function getApi(e) {
         var labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
         var labelIndex = 0;
 
-
-
+        //marker images
         var icon1 = "images/icon.png";
         var icon2 = "images/alt-icon.png";
         //drop marker for every business name
@@ -122,9 +125,6 @@ function getApi(e) {
         google.maps.event.addListener(marker, 'mouseout', function() {
           this.setIcon(icon1);
         });
-
-
-
       }
     } else {
         alert('Make sure you entered Find and Location values');
