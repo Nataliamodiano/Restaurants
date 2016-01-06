@@ -57,7 +57,7 @@ function getApi(e) {
       //parsed the response text and got access to the businesses
       var response = JSON.parse(xhr.responseText);
       var name = response.businesses;
-
+      console.log(response);
       //geocoded the location that is entered to become the new center of the map
       var geocoder = new google.maps.Geocoder();
       var address = document.getElementById('location').value;
@@ -72,11 +72,14 @@ function getApi(e) {
       for (i = 0; i < name.length; i++){
         var result = document.getElementById('result');
         var item = document.createElement('li');
-        var title = document.createElement('h4');
+        var title = document.createElement('a');
         var paragraph = document.createElement('p');
         var image = document.createElement('img');
         image.setAttribute('src', name[i].rating_img_url);
 
+        title.setAttribute('href', name[i].mobile_url);
+        title.setAttribute('class', 'h4');
+        title.setAttribute('target', '_blank');
         title.textContent = name[i].name;
         paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '.'].join('');
         item.className += "new-li"; 

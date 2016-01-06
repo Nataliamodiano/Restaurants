@@ -5,39 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rock+Salt' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="default.css">
   </head>
-  <body class="container">
-    <!-- hero image -->
-    <div id="hero-image" alt="Image of a restaurant."></div>
-    <!-- search bars -->
-    <div id="search-bar">
-      <input class="input" id="find" type="search" placeholder="Find: tacos, dinner">
-      <input class="input" id="location" type="search" placeholder="Location: City, Zip Code">
-      <input class="input" id="radius" type="search" placeholder="Radius in meters">
-      <select class="input" id="sort">
-        <option value="0" selected>Best Matched</option>
-        <option value="1">Distance</option> 
-        <option value="2">Highest Rated</option> 
-      </select></br>
-      <button class="input" id="submit">Search </button>
-    </div>
-    <!-- map and search results -->
-    <div class="row">
-      <ol class="col-sm-6" id="result" type="A">
-        <h3>Search results:</h3>
-      </ol>
-      <div class"col-sm-6" id="map"></div>
-    </div>
-    <!-- list of selections -->
-    <ul id="restaurant-list">
-      <h3>Lets eat at...</h3>
-      <input class="input" id="restaurant-name" type="text" placeholder="Restaurant name">
-      <button id="add-restaurant">Add Restaurant</button>
-    </ul>
-    <!-- javascript -->
-    <script src="app.js" type="text/javascript"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0OuluWj8gQFySi3QmUypDaUok5CCmVqM&callback=initMap"></script>
-    <script src="adder.js" type="text/javascript"></script>
+  <body>
+    <div class="container">
+      <!-- navbar -->
+      <div class="row navbar">
+        <div id="logo">Lets Eat...</div>
+      </div>
+      <!-- hero image -->
+      <div id="hero-image" alt="Image of a restaurant."></div>
+
+      <!-- product description -->
+      <div class="container">
+        <div class="row">
+          <div class="title h1">Struggle with finding places to eat?</div>
+          <h2 class="title">Use Lets Eat... to create a list of restaurants for readily available options.</h2> 
+          <div class="row">
+            <h1 class="title">What is Lets Eat...</h1>
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              <div class="col-sm-12 col-md-4">
+                <img class="center-block" src="" alt=""></img>
+                <h2 class="title">Search</h2>
+                <p class="description">Search for types of food or restaurants in a city you desire.</p>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <img class="center-block" src="" alt=""></img>
+                <h2 class="title">View</h2>
+                <p class="description">View search results and their markers on Google Maps.</p>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <img class="center-block" src="" alt=""></img>
+                <h2 class="title">Click</h2>
+                <p class="description">Click on restaurant names to view their yelp page and add them to your list of restaurants you would like to visit in the future.</p>
+              </div>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- search bars -->
+      <div id="search-bar">
+        <input class="input" id="find" type="search" placeholder="Find: tacos, dinner">
+        <input class="input" id="location" type="search" placeholder="Location: City, Zip Code">
+        <input class="input" id="radius" type="search" placeholder="Radius in meters">
+        <select class="input" id="sort">
+          <option value="0" selected>Best Matched</option>
+          <option value="1">Distance</option> 
+          <option value="2">Highest Rated</option> 
+        </select></br>
+        <button class="input" id="submit">Search </button>
+      </div>
+      <!-- map and search results -->
+      <div class="row">
+        <ol class="col-sm-6" id="result" type="A">
+          <h3 class="title">Search results:</h3>
+        </ol>
+        <div class"col-sm-6" id="map"></div>
+      </div>
+      <!-- list of selections -->
+      <ul id="restaurant-list">
+        <h3 class="title">Lets eat at...</h3>
+        <input class="input" id="restaurant-name" type="text" placeholder="Restaurant name">
+        <button id="add-restaurant">Add Restaurant</button>
+      </ul>
+       <a href="#logo" type="button"><button>Scroll to Top of Page</button></a>
+      <!-- javascript -->
+      <script src="app.js" type="text/javascript"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0OuluWj8gQFySi3QmUypDaUok5CCmVqM&callback=initMap"></script>
+      <script src="adder.js" type="text/javascript"></script>
+    <div>
   </body>
 </html>
