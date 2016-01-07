@@ -10,6 +10,7 @@ function typeName() {
   var remove = document.createElement('input');
   remove.setAttribute('type', 'button');
   remove.setAttribute('value', 'Delete');
+  remove.setAttribute('class', 'btn btn-default');
   title.textContent = restaurantName;
   restaurantList.appendChild(item);
   item.appendChild(title);
@@ -29,6 +30,7 @@ function typeName() {
   var notesButton = document.createElement('input');
   notesButton.setAttribute('type', 'button');
   notesButton.setAttribute('value', 'Add Notes');
+  notesButton.setAttribute('class', 'btn btn-default');
   item.appendChild(notesButton);
   item.appendChild(notes);
   notes.setAttribute('class', 'collapse');
@@ -59,6 +61,7 @@ result.addEventListener('click', function(e) {
   var remove = document.createElement('input');
   remove.setAttribute('type', 'button');
   remove.setAttribute('value', 'Delete');
+  remove.setAttribute('class', 'btn btn-default');
   var targetClone = target.cloneNode(true);
 
   if (e.path[0].className === 'gray') {
@@ -77,6 +80,7 @@ result.addEventListener('click', function(e) {
   //add text box for notes 
   var notes = document.createElement('textarea');
   var notesButton = document.createElement('input');
+  notesButton.setAttribute('class', 'btn btn-default');
   notesButton.setAttribute('type', 'button');
   notesButton.setAttribute('value', 'Add Notes');
   item.appendChild(notesButton);

@@ -60,7 +60,7 @@
             <option value="1">Distance</option> 
             <option value="2">Highest Rated</option> 
           </select></br>
-          <button class="input" id="submit">Search </button>
+          <button class="input btn btn-default" id="submit">Search</button>
         </div>
       </form>
       <!-- map and search results -->
@@ -72,12 +72,11 @@
       </div>
       <!-- list of selections -->
       <div class="title h1">Lets eat at...</div>
-      <input class="input" id="restaurant-name" type="text" placeholder="Restaurant name">
-      <button id="add-restaurant">Add Restaurant</button>
-      <ul class="center-block" id="restaurant-list">
-        <h3 id="my-list">My List</h3>
-      </ul>
-       <a href="#logo" type="button"><button>Scroll to Top of Page</button></a>
+      <input class="input row" id="restaurant-name" type="text" placeholder="Add your own restaurant name">
+      <button class="input btn btn-default row" id="add-restaurant">Add Restaurant</button>
+      <h3 id="my-list">My List</h3>
+      <ul class="center-block row" id="restaurant-list"></ul>
+       <a href="#logo" type="button" id="scroll"><button>Scroll to Top of Page</button></a>
       <!-- javascript -->
       <script src="app.js" type="text/javascript"></script>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0OuluWj8gQFySi3QmUypDaUok5CCmVqM&callback=initMap"></script>

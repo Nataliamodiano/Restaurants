@@ -82,7 +82,7 @@ function getApi(e) {
         addLink.addEventListener('click', function() {
           var link = document.getElementById('link');
           this.setAttribute('class', 'gray');
-          this.textContent = 'Added to list';
+          this.textContent = 'Looking forward to your visit!';
         }, false);
 
         //append results to the page

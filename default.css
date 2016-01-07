@@ -32,7 +32,7 @@ body {
 #map { 
   height: 500px; 
   display: block;
-  border: 2px solid black;
+  border: 2px solid #1B0B0A;
   margin-left: 20px;
 }
 
@@ -41,7 +41,7 @@ body {
   width: 600px; 
   height: 500px;
   overflow: auto;
-  border: 2px solid black;
+  border: 2px solid #1B0B0A;
   padding-left: 30px;
   margin-right: 20px;
   background-color: #fff;
@@ -56,6 +56,7 @@ body {
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
   padding: 2px 2px 2px 5px;
+  outline: none;
 }
 
 #submit {
@@ -69,18 +70,23 @@ body {
 #restaurant-list {
   height: 600px;
   overflow: auto;
+  width: 100%;
+  padding-right: 25%; 
+  padding-left: 10%;
 }
 
 .title {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
   text-align: center;
+  color: #1B0B0A;
 }
 
 .description {
   font-family: 'Asar', serif;
   text-align: center;
   font-size: 18px;
+  color: #1B0B0A;
 }
 
 #hook {
@@ -111,10 +117,12 @@ body {
 #my-list {
   font-family: 'Nunito', sans-serif;
   text-align: center;
+  color: #1B0B0A;
 }
 
 #restaurant-name {
   margin-left: 50px;
+  width: 469px;
 }
 
 #locations {
@@ -134,11 +142,34 @@ body {
 }
 
 .gray {
-  color: #787575;
+  color: #1B0B0A;
 }
 
-#restaurant-list {
-  width: 75%;
+.btn-default {
+  outline: none;
+  border: 1px solid #1B0B0A;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.btn:focus, .btn:active, .btn:active:focus {
+  outline: none;
+}
+
+.collapse, .in {
+  width: 80%;
+  height: 100px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#scroll {
+  color: #a00f00;
+  margin-top: 20px;
+}
+
+.new-li {
+  margin-top: 10px;
 }
 
 @media screen and (max-width:1199px) {
@@ -164,16 +195,35 @@ body {
     width: 50%; 
     margin-right: 0px;
   }
+
   .title {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
   }
+
+  .btn-default {
+    margin-left: 0px;
+  }
+
+  #restaurant-name {
+    width: 40%;
+  }
+
+  #add-restaurant {
+    width: 23%;
+    margin-left: 15px;
+  }
 }
 
 @media screen and (max-width:1160px) {
-  .input {
+  .input,
+  #restaurant-name {
     width: 22.5%;
     padding: 2px 2px 2px 5px;
+  }
+
+  #restaurant-name {
+    width: 40%;
   }
 }
 
@@ -192,6 +242,15 @@ body {
     padding-left: 0px;
     padding-right: 0px;
   }
+
+  #restaurant-name {
+    width: 40%;
+  }
+
+  #restaurant-list {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
 @media screen and (max-width:770px) {
@@ -209,9 +268,30 @@ body {
     display: block;
     width: 100%; 
   }
-  .input {
+
+  .input,
+  #restaurant-name {
     width: 98%;
     margin: 10px 10px 10px 10px;
     padding: 2px 2px 2px 5px;
+  }
+
+  #add-restaurant {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    margin-bottom: 40px;
+  }
+
+  #restaurant-list {
+    height: 400px;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  #what-is {
+    margin-bottom: 40px;
   }
 }
