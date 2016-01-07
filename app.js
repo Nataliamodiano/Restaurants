@@ -79,9 +79,10 @@ function getApi(e) {
         paragraph.setAttribute('id', 'locations');
 
         //link turns gray on click
-        addLink.addEventListener('mouseup', function() {
+        addLink.addEventListener('click', function() {
           var link = document.getElementById('link');
           this.setAttribute('class', 'gray');
+          this.textContent = 'Added to list';
         }, false);
 
         //append results to the page

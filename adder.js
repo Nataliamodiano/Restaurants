@@ -47,16 +47,6 @@ function typeName() {
   }
 }
 
-//         remove link text on my list after it is clicked
-//         var link = document.getElementById('link');
-//         console.log(link);
-
-//         link.addEventListener('click', function(){
-//           addLink.setAttribute('class', 'hide');
-//           console.log('hide');
-//         }, false);
-// console.log('5');
-
 // get value of item clicked on in search result list
 result.addEventListener('click', function(e) {
   e = e || window.event;
@@ -66,27 +56,17 @@ result.addEventListener('click', function(e) {
   // append the item clicked on to the list
   var restaurantList = document.getElementById('restaurant-list');
   var item = document.createElement('li');
-  var title = document.createElement('h4');
   var remove = document.createElement('input');
   remove.setAttribute('type', 'button');
   remove.setAttribute('value', 'Delete');
-  title.textContent = text;
-  title.setAttribute('class', 'item');
-  
-  var restaurant = document.getElementById('restaurant');
-  var locations = document.getElementById('locations');
-  var restaurantClone = restaurant.cloneNode(true);
-  var locationsClone = locations.cloneNode(true);
-  
-  console.log(restaurant);
+  var targetClone = target.cloneNode(true);
 
   if (e.path[0].className === 'gray') {
     restaurantList.appendChild(item);
   } else {
-    console.log('broken');
+    console.log('click on the link');
   }
-  item.appendChild(restaurantClone);
-  item.appendChild(locationsClone);
+  item.appendChild(targetClone);
   item.appendChild(remove);
 
   //delete item on button click
@@ -115,7 +95,6 @@ result.addEventListener('click', function(e) {
       console.log('You got the wrong note');
     }
   }
-
 }, false);
 
 
