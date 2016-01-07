@@ -115,6 +115,8 @@ function getApi(e) {
           icon: icon1,
         });
 
+        item.setAttribute('id', 'off');
+
         //highlight marker
         google.maps.event.addListener(marker, 'mouseover', function() {
           this.setIcon(icon2);
@@ -123,12 +125,27 @@ function getApi(e) {
           this.setIcon(icon1);
         });
 
-        // item.addEventListener('mouseover', function() {
-        //   this.setIcon(icon2);
-        // }, false);
-        // item.addEventListener('mouseout', function() {
-        //   this.setIcon(icon1);
-        // }, false);
+        //mouseover marker to highlight li in results list
+        google.maps.event.addListener(marker, 'mouseover', function() {
+          var item = document.getElementById('off');
+          item.setAttribute('id', 'highlight');
+          console.log(item);
+        });
+        google.maps.event.addListener(marker, 'mouseout', function() {
+          var item = document.getElementById('highlight');
+          item.setAttribute('id', 'off');
+        });
+
+        //mouseover li in result list to highlight marker
+        item.addEventListener('mouseover', function() {
+          marker.setIcon(icon2);
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+          console.log(marker.title);
+        }, false);
+        item.addEventListener('mouseout', function() {
+          marker.setIcon(icon1);
+          marker.setAnimation(null);
+        }, false);
       }
     } else {
         alert('Make sure you entered Find and Location values');

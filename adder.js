@@ -34,6 +34,7 @@ function typeName() {
   item.appendChild(notesButton);
   item.appendChild(notes);
   notes.setAttribute('class', 'collapse');
+  notes.setAttribute('placeholder', 'Personal comments, such as: menu items you might like, already had, or dont like. ');
   notesButton.addEventListener('click', toggleNotes, false);
   function toggleNotes() {
     
