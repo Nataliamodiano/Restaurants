@@ -50,17 +50,19 @@
       </div>
 
       <!-- search bars -->
-      <div id="search-bar">
-        <input class="input" id="find" type="search" placeholder="Find: tacos, dinner">
-        <input class="input" id="location" type="search" placeholder="Location: City, Zip Code">
-        <input class="input" id="radius" type="search" placeholder="Radius in meters">
-        <select class="input" id="sort">
-          <option value="0" selected>Best Matched</option>
-          <option value="1">Distance</option> 
-          <option value="2">Highest Rated</option> 
-        </select></br>
-        <button class="input" id="submit">Search </button>
-      </div>
+      <form>
+        <div id="search-bar">
+          <input class="input" id="find" type="search" placeholder="Find: tacos, dinner">
+          <input class="input" id="location" type="search" placeholder="Location: City, Zip Code">
+          <input class="input" id="radius" type="search" placeholder="Radius in meters">
+          <select class="input" id="sort">
+            <option value="0" selected>Best Matched</option>
+            <option value="1">Distance</option> 
+            <option value="2">Highest Rated</option> 
+          </select></br>
+          <button class="input" id="submit">Search </button>
+        </div>
+      </form>
       <!-- map and search results -->
       <div class="row">
         <ol class="col-sm-6" id="result" type="A">
