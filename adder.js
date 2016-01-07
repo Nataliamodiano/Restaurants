@@ -47,13 +47,22 @@ function typeName() {
   }
 }
 
+//         remove link text on my list after it is clicked
+//         var link = document.getElementById('link');
+//         console.log(link);
+
+//         link.addEventListener('click', function(){
+//           addLink.setAttribute('class', 'hide');
+//           console.log('hide');
+//         }, false);
+// console.log('5');
+
 // get value of item clicked on in search result list
 result.addEventListener('click', function(e) {
   e = e || window.event;
-  var target = e.path[2];
+  var target = e.path[1];
   text = target.textContent || text.innerText;
-console.log(e);
-  console.log(e.path[2]);
+
   // append the item clicked on to the list
   var restaurantList = document.getElementById('restaurant-list');
   var item = document.createElement('li');
@@ -62,22 +71,29 @@ console.log(e);
   remove.setAttribute('type', 'button');
   remove.setAttribute('value', 'Delete');
   title.textContent = text;
+  title.setAttribute('class', 'item');
   
-  item.appendChild(title);
-  item.appendChild(remove);
+  var restaurant = document.getElementById('restaurant');
+  var locations = document.getElementById('locations');
+  var restaurantClone = restaurant.cloneNode(true);
+  var locationsClone = locations.cloneNode(true);
   
-  if (e.path[2].className === 'new-li') {
+  console.log(restaurant);
+
+  if (e.path[0].className === 'gray') {
     restaurantList.appendChild(item);
   } else {
     console.log('broken');
   }
+  item.appendChild(restaurantClone);
+  item.appendChild(locationsClone);
+  item.appendChild(remove);
 
   //delete item on button click
   remove.addEventListener('click', removeItem, false);
   function removeItem() {
     restaurantList.removeChild(item);
   }
-
   //add text box for notes 
   var notes = document.createElement('textarea');
   var notesButton = document.createElement('input');
@@ -99,5 +115,8 @@ console.log(e);
       console.log('You got the wrong note');
     }
   }
+
 }, false);
+
+
 

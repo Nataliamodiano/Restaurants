@@ -2,16 +2,6 @@
 var submit = document.getElementById('submit');
 submit.addEventListener('click', getApi, false);
 
-// submit.addEventListener('keyup', keyEvent, false);
-
-// function keyEvent(event) {
-//   var key = event.keyCode || event.which;
-//   var keychar = String.fromCharCode(key);
-//   if (key == 13) {
-//     metaChar = true;
-//   } else {console.log('broken');}
-// }
-
 //initiate the map with the center of Los Angeles
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -36,7 +26,6 @@ function geocodeAddress(geocoder, resultsMap) {
     }
   });
 }
-
 
 function getApi(e) {
   e.preventDefault();
@@ -79,15 +68,21 @@ function getApi(e) {
         image.setAttribute('class', 'rating');
         //add yelp link to h4 title
         title.setAttribute('href', name[i].mobile_url);
-        title.setAttribute('class', 'restaurant');
+        title.setAttribute('id', 'restaurant');
         title.setAttribute('target', '_blank');
         title.textContent = name[i].name;
         
         var addLink = document.createElement('a');
+        addLink.setAttribute('id', 'link');
         addLink.textContent = 'Click here to add this restaurant to your list!';
         paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '. Address and phone number: ', name[i].location.address, '. ', name[i].location.city, ', ', name[i].display_phone, '. '].join('');
-        paragraph.appendChild(addLink);
-        paragraph.setAttribute('class', 'location');
+        paragraph.setAttribute('id', 'locations');
+
+        //link turns gray on click
+        addLink.addEventListener('mouseup', function() {
+          var link = document.getElementById('link');
+          this.setAttribute('class', 'gray');
+        }, false);
 
         //append results to the page
         result.appendChild(item);
@@ -95,7 +90,8 @@ function getApi(e) {
         item.appendChild(paragraph);
         item.className += "new-li"; 
         title.appendChild(image);
-
+        item.appendChild(addLink);
+        
         //get coordinates
         var latitude = name[i].location.coordinate.latitude;
         var longitude = name[i].location.coordinate.longitude;
@@ -117,7 +113,7 @@ function getApi(e) {
           label: labels[i][labelIndex++ % labels.length],
           icon: icon1,
         });
-        
+
         //highlight marker
         google.maps.event.addListener(marker, 'mouseover', function() {
           this.setIcon(icon2);
@@ -125,11 +121,17 @@ function getApi(e) {
         google.maps.event.addListener(marker, 'mouseout', function() {
           this.setIcon(icon1);
         });
+
+        // item.addEventListener('mouseover', function() {
+        //   this.setIcon(icon2);
+        // }, false);
+        // item.addEventListener('mouseout', function() {
+        //   this.setIcon(icon1);
+        // }, false);
       }
     } else {
         alert('Make sure you entered Find and Location values');
       }
-
   }
 
   xhr.open('GET', 'http://localhost:8080/yelp-api/' + find + '/' + location + '/' + radius + '/' + sort, true);
