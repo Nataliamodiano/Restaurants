@@ -112,7 +112,7 @@ function getApi(e) {
           animation: google.maps.Animation.DROP,
           title: name[i].name,
           label: labels[i][labelIndex++ % labels.length],
-          icon: icon1,
+          icon: icon1
         });
 
         //highlight marker on mouseover
@@ -123,29 +123,65 @@ function getApi(e) {
           this.setIcon(icon1);
         });
 
+        // Before self invoking function //mouseover marker to highlight li in results list
+        // item.setAttribute('id', 'off');
+        // google.maps.event.addListener(marker, 'mouseover', function() {
+        //   var item = document.getElementById('off');
+        //   item.setAttribute('id', 'highlight');
+        //   console.log(item);
+        // });
+        // google.maps.event.addListener(marker, 'mouseout', function() {
+        //   var item = document.getElementById('highlight');
+        //   item.setAttribute('id', 'off');
+        // });
+
+        // //mouseover li in result list to highlight marker
+        // item.addEventListener('mouseover', function() {
+        //   marker.setIcon(icon2);
+        //   marker.setAnimation(google.maps.Animation.BOUNCE);
+        //   console.log(marker.title);
+        // }, false);
+
+        // item.addEventListener('mouseout', function() {
+        //   marker.setIcon(icon1);
+        //   marker.setAnimation(null);
+        // }, false);
+
+
+
+
+
+
         //mouseover marker to highlight li in results list
         item.setAttribute('id', 'off');
-        google.maps.event.addListener(marker, 'mouseover', function() {
+        google.maps.event.addListener(marker, 'mouseover', (function() {
           var item = document.getElementById('off');
           item.setAttribute('id', 'highlight');
           console.log(item);
-        });
-        google.maps.event.addListener(marker, 'mouseout', function() {
+        })(););
+
+        google.maps.event.addListener(marker, 'mouseout', (function() {
           var item = document.getElementById('highlight');
           item.setAttribute('id', 'off');
-        });
+        })(););
 
         //mouseover li in result list to highlight marker
-        item.addEventListener('mouseover', function() {
+        item.addEventListener('mouseover', (function() {
           marker.setIcon(icon2);
           marker.setAnimation(google.maps.Animation.BOUNCE);
           console.log(marker.title);
-        }, false);
+        })();, false);
 
-        item.addEventListener('mouseout', function() {
+        item.addEventListener('mouseout', (function() {
           marker.setIcon(icon1);
           marker.setAnimation(null);
-        }, false);
+        })();, false);
+
+
+
+
+
+
       } //end for loop
     } else {
         alert('Make sure you entered Find and Location values');
