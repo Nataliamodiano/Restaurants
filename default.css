@@ -194,6 +194,11 @@ body {
   padding: 0 5px 0 0; 
 }
 
+#link {
+  font-family: 'Asar', serif;
+  font-size: 18px;
+}
+
 @media screen and (max-width:1199px) {
   .container {
     width: 100%;
