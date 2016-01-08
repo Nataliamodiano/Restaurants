@@ -1,7 +1,12 @@
+body {
+  background-color: #f5f5f1;
+}
+
 .container {
   width: 1200px;
   margin: 0px auto;
   padding: 0px 0px 0px 0px;
+  background-color: #fff;
 }
 
 .row {
@@ -9,18 +14,25 @@
   margin: 0px 0px 0px 0px;
 }
 
-#hero-image {
-  height: 300px;
-  width: 100%;
-  background-image: url(images/restaurant-image.jpg);
-  background-position: center -150px;
-  background-repeat: no-repeat; 
+.navbar {
+  background-color: #1B0B0A;
+  padding-left: 20px;
+  border-radius: 0px;
+}
+
+#logo {
+  font-family: 'Rock Salt', cursive;
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #DE1500;
+  font-weight: 500;
 }
 
 #map { 
   height: 500px; 
   display: block;
-  border: 2px solid black;
+  border: 2px solid #1B0B0A;
   margin-left: 20px;
 }
 
@@ -28,10 +40,11 @@
   display: block;
   width: 600px; 
   height: 500px;
-  overflow: scroll;
-  border: 2px solid black;
+  overflow: auto;
+  border: 2px solid #1B0B0A;
   padding-left: 30px;
   margin-right: 20px;
+  background-color: #fff;
 }
 
 #search-bar {
@@ -43,6 +56,12 @@
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
   padding: 2px 2px 2px 5px;
+  outline: none;
+  text-transform: capitalize;
+  font-family: 'Asar', serif;
+  font-size: 18px;
+  font-weight: 800;
+  padding-top: 5px;
 }
 
 #submit {
@@ -51,6 +70,133 @@
   margin-right:auto; 
   width: 300px;
   margin-bottom: 40px;
+}
+
+#restaurant-list {
+  height: 600px;
+  overflow: auto;
+  width: 100%;
+  padding-right: 25%; 
+  padding-left: 10%;
+}
+
+.title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #1B0B0A;
+}
+
+.description {
+  font-family: 'Asar', serif;
+  text-align: center;
+  font-size: 18px;
+  color: #1B0B0A;
+}
+
+#hook {
+ background-color: #DE1500;
+ padding: 30px 0px 40px 0px;
+}
+
+.hook-type {
+  color: #f5f5f1;
+}
+
+#product-description {
+  padding: 30px 0px 30px 0px;
+}
+
+#what-is {
+  margin-bottom: 20px;
+}
+
+#search {
+  padding-top: 2px;
+}
+
+#view {
+  padding-top: 12px;
+}
+
+#my-list {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: #1B0B0A;
+}
+
+#restaurant-name {
+  margin-left: 50px;
+  width: 469px;
+}
+
+#locations {
+  font-family: 'Asar', serif;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+#restaurant {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px; 
+}
+
+.rating {
+  float: right;
+  margin-top: 10px;
+}
+
+.gray {
+  color: #1B0B0A;
+}
+
+.btn-default {
+  outline: none;
+  border: 1px solid #1B0B0A;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.btn:focus, .btn:active, .btn:active:focus {
+  outline: none;
+}
+
+.collapse, .in {
+  width: 80%;
+  height: 100px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#scroll {
+  color: #a00f00;
+  margin-top: 20px;
+}
+
+.new-li {
+  margin-top: 10px;
+}
+
+#highlight {
+  background-color: #f5f5f1;
+}
+
+#off {
+  background-color: #fff;
+}
+
+.asterisk_input:after {
+  content:" *"; 
+  color: #DE1500;
+  position: absolute; 
+  margin: 8px 0px 0px -30px; 
+  font-size: xx-large; 
+  padding: 0 5px 0 0; 
+}
+
+#link {
+  font-family: 'Asar', serif;
+  font-size: 18px;
 }
 
 @media screen and (max-width:1199px) {
@@ -76,12 +222,61 @@
     width: 50%; 
     margin-right: 0px;
   }
+
+  .title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+  }
+
+  .btn-default {
+    margin-left: 0px;
+  }
+
+  #restaurant-name {
+    width: 40%;
+  }
+
+  #add-restaurant {
+    width: 23%;
+    margin-left: 15px;
+  }
 }
 
-@media screen and (max-width:1155px) {
-  .input {
+@media screen and (max-width:1160px) {
+  .input,
+  #restaurant-name {
     width: 22.5%;
     padding: 2px 2px 2px 5px;
+  }
+
+  #restaurant-name {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .row-one {
+    background-color: #f5f5f1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #row-two {
+    background-color: #fff;
+  }
+
+  .col-sm-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #restaurant-name {
+    width: 40%;
+  }
+
+  #restaurant-list {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -100,9 +295,39 @@
     display: block;
     width: 100%; 
   }
-  .input {
+
+  .input,
+  #restaurant-name {
     width: 98%;
     margin: 10px 10px 10px 10px;
     padding: 2px 2px 2px 5px;
+  }
+
+  #add-restaurant {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    margin-bottom: 40px;
+  }
+
+  #restaurant-list {
+    height: 400px;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  #what-is {
+    margin-bottom: 40px;
+  }
+
+  .asterisk_input:after {
+    content:" *"; 
+    color: #DE1500;
+    position: absolute; 
+    margin: -50px 0px 0px 0px; 
+    font-size: xx-large; 
+    padding: 0 5px 0 0; 
   }
 }
