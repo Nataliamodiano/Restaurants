@@ -1,0 +1,22 @@
+{
+  "name": "lets-eat",
+  "version": "1.0.0",
+  "description": "A website for people who want to list the restaurants they wish to visit and view their yelp ratings.",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nataliamodiano/restaurants.git"
+  },
+  "author": "Natalia Modiano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nataliamodiano/restaurants/issues"
+  },
+  "homepage": "https://github.com/Nataliamodiano/restaurants#readme"
+}
