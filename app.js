@@ -115,9 +115,7 @@ function getApi(e) {
           icon: icon1,
         });
 
-        item.setAttribute('id', 'off');
-
-        //highlight marker
+        //highlight marker on mouseover
         google.maps.event.addListener(marker, 'mouseover', function() {
           this.setIcon(icon2);
         });
@@ -126,6 +124,7 @@ function getApi(e) {
         });
 
         //mouseover marker to highlight li in results list
+        item.setAttribute('id', 'off');
         google.maps.event.addListener(marker, 'mouseover', function() {
           var item = document.getElementById('off');
           item.setAttribute('id', 'highlight');
@@ -142,11 +141,12 @@ function getApi(e) {
           marker.setAnimation(google.maps.Animation.BOUNCE);
           console.log(marker.title);
         }, false);
+
         item.addEventListener('mouseout', function() {
           marker.setIcon(icon1);
           marker.setAnimation(null);
         }, false);
-      }
+      } //end for loop
     } else {
         alert('Make sure you entered Find and Location values');
       }

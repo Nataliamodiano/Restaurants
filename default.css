@@ -185,6 +185,15 @@ body {
   background-color: #fff;
 }
 
+.asterisk_input:after {
+  content:" *"; 
+  color: #DE1500;
+  position: absolute; 
+  margin: 8px 0px 0px -30px; 
+  font-size: xx-large; 
+  padding: 0 5px 0 0; 
+}
+
 @media screen and (max-width:1199px) {
   .container {
     width: 100%;
@@ -306,5 +315,14 @@ body {
 
   #what-is {
     margin-bottom: 40px;
+  }
+
+  .asterisk_input:after {
+    content:" *"; 
+    color: #DE1500;
+    position: absolute; 
+    margin: -50px 0px 0px 0px; 
+    font-size: xx-large; 
+    padding: 0 5px 0 0; 
   }
 }
