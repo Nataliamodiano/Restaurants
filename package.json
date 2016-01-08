@@ -19,4 +19,11 @@
     "url": "https://github.com/Nataliamodiano/restaurants/issues"
   },
   "homepage": "https://github.com/Nataliamodiano/restaurants#readme"
+  "dependencies": {
+      "body-parser": "^1.14.1",
+      "express": "^4.13.3",
+      "node-yelp": "0.0.3",
+      "oauth": "^0.9.14",
+      "request": "^2.67.0"
+  }
 }
