@@ -101,6 +101,9 @@ function getApi(e) {
         // added letters to markers
         var labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
         var labelIndex = 0;
+        var labelLetter = labels[i][labelIndex++ % labels.length];
+
+        item.setAttribute('id', 'marker-' + labelLetter);
 
         //marker images
         var icon1 = "images/icon.png";
@@ -111,76 +114,32 @@ function getApi(e) {
           map: map,
           animation: google.maps.Animation.DROP,
           title: name[i].name,
-          label: labels[i][labelIndex++ % labels.length],
+          label: labelLetter,
           icon: icon1
         });
 
         //highlight marker on mouseover
         google.maps.event.addListener(marker, 'mouseover', function() {
           this.setIcon(icon2);
+          var restaurant = document.getElementById('marker-' + this.label);
+          restaurant.className = 'new-li highlight';
         });
         google.maps.event.addListener(marker, 'mouseout', function() {
           this.setIcon(icon1);
+          var restaurant = document.getElementById('marker-' + this.label);
+          restaurant.className = 'new-li';
         });
 
-        // Before self invoking function //mouseover marker to highlight li in results list
-        // item.setAttribute('id', 'off');
-        // google.maps.event.addListener(marker, 'mouseover', function() {
-        //   var item = document.getElementById('off');
-        //   item.setAttribute('id', 'highlight');
-        //   console.log(item);
-        // });
-        // google.maps.event.addListener(marker, 'mouseout', function() {
-        //   var item = document.getElementById('highlight');
-        //   item.setAttribute('id', 'off');
-        // });
-
-        // //mouseover li in result list to highlight marker
-        // item.addEventListener('mouseover', function() {
-        //   marker.setIcon(icon2);
-        //   marker.setAnimation(google.maps.Animation.BOUNCE);
-        //   console.log(marker.title);
-        // }, false);
-
-        // item.addEventListener('mouseout', function() {
-        //   marker.setIcon(icon1);
-        //   marker.setAnimation(null);
-        // }, false);
-
-
-
-
-
-
-        //mouseover marker to highlight li in results list
-        item.setAttribute('id', 'off');
-        google.maps.event.addListener(marker, 'mouseover', (function() {
-          var item = document.getElementById('off');
-          item.setAttribute('id', 'highlight');
-          console.log(item);
-        })(););
-
-        google.maps.event.addListener(marker, 'mouseout', (function() {
-          var item = document.getElementById('highlight');
-          item.setAttribute('id', 'off');
-        })(););
-
-        //mouseover li in result list to highlight marker
-        item.addEventListener('mouseover', (function() {
+        item.addEventListener('mouseover', function() {
           marker.setIcon(icon2);
           marker.setAnimation(google.maps.Animation.BOUNCE);
           console.log(marker.title);
-        })();, false);
+        }, false);
 
-        item.addEventListener('mouseout', (function() {
+        item.addEventListener('mouseout', function() {
           marker.setIcon(icon1);
           marker.setAnimation(null);
-        })();, false);
-
-
-
-
-
+        }, false);
 
       } //end for loop
     } else {
