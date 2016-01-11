@@ -130,16 +130,17 @@ function getApi(e) {
           restaurant.className = 'new-li';
         });
 
-        item.addEventListener('mouseover', function() {
-          marker.setIcon(icon2);
-          marker.setAnimation(google.maps.Animation.BOUNCE);
-          console.log(marker.title);
-        }, false);
+        //mouseover marker to highlight li in results list
+        // item.addEventListener('mouseover', function() {
+        //   marker.setIcon(icon2);
+        //   marker.setAnimation(google.maps.Animation.BOUNCE);
+        //   console.log(marker.title);
+        // }, false);
 
-        item.addEventListener('mouseout', function() {
-          marker.setIcon(icon1);
-          marker.setAnimation(null);
-        }, false);
+        // item.addEventListener('mouseout', function() {
+        //   marker.setIcon(icon1);
+        //   marker.setAnimation(null);
+        // }, false);
 
       } //end for loop
     } else {
