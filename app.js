@@ -118,7 +118,7 @@ function getApi(e) {
           icon: icon1
         });
 
-        //highlight marker on mouseover
+        //mouseover marker to highlight marker and li in results list
         google.maps.event.addListener(marker, 'mouseover', function() {
           this.setIcon(icon2);
           var restaurant = document.getElementById('marker-' + this.label);
@@ -130,17 +130,21 @@ function getApi(e) {
           restaurant.className = 'new-li';
         });
 
-        //mouseover marker to highlight li in results list
-        // item.addEventListener('mouseover', function() {
-        //   marker.setIcon(icon2);
-        //   marker.setAnimation(google.maps.Animation.BOUNCE);
-        //   console.log(marker.title);
-        // }, false);
+        // mouseover li to highlight marker and make it bounce
+        title.addEventListener('mouseover', function() {
+          
+          // var markers = document.getElementsByClassName('gmnoprint');
+          console.log(this);
+          //console.log(marker);
+          marker.setIcon(icon2);
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+          console.log(marker.title);
+        }, false);
 
-        // item.addEventListener('mouseout', function() {
-        //   marker.setIcon(icon1);
-        //   marker.setAnimation(null);
-        // }, false);
+        title.addEventListener('mouseout', function() {
+          marker.setIcon(icon1);
+          marker.setAnimation(null);
+        }, false);
 
       } //end for loop
     } else {
