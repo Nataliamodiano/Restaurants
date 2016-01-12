@@ -46,7 +46,6 @@ function getApi(e) {
       //parsed the response text and got access to the businesses
       var response = JSON.parse(xhr.responseText);
       var name = response.businesses;
-      console.log(response);
       //geocoded the location that is entered to become the new center of the map
       var geocoder = new google.maps.Geocoder();
       var address = document.getElementById('location').value;
@@ -131,28 +130,25 @@ function getApi(e) {
         });
 
         // mouseover li to highlight marker and make it bounce
-        title.addEventListener('mouseover', function() {
-          
-          // var markers = document.getElementsByClassName('gmnoprint');
-          console.log(this);
-          //console.log(marker);
-          marker.setIcon(icon2);
-          marker.setAnimation(google.maps.Animation.BOUNCE);
-          console.log(marker.title);
-        }, false);
+        title.addEventListener('mouseover', (function(m) {
+          return function(){
+            m.setIcon(icon2);
+            m.setAnimation(google.maps.Animation.BOUNCE);
+          }
+        })(marker), false);
 
-        title.addEventListener('mouseout', function() {
-          marker.setIcon(icon1);
-          marker.setAnimation(null);
-        }, false);
-
+        title.addEventListener('mouseout', (function(m) {
+          return function(){
+            m.setIcon(icon1);
+            m.setAnimation(null);
+          }
+        })(marker), false);
       } //end for loop
     } else {
         alert('Make sure you entered Find and Location values');
       }
   }
-
   xhr.open('GET', 'http://localhost:8080/yelp-api/' + find + '/' + location + '/' + radius + '/' + sort, true);
   xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
   xhr.send(location);
-}
+} //end of get api
