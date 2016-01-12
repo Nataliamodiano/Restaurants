@@ -6,6 +6,7 @@ Built using:
   - Node Yelp Api
   - Google Maps Api 
   - Node (Express)
+  - Ajax
 
 ![restaurants-product-description](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home.png?raw=true)
 
