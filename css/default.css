@@ -15,7 +15,7 @@ body {
 }
 
 .navbar {
-  background-color: #1B0B0A;
+  background-color: #1b0b0a;
   padding-left: 20px;
   border-radius: 0px;
 }
@@ -25,14 +25,14 @@ body {
   font-size: 36px;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #DE1500;
+  color: #de1500;
   font-weight: 500;
 }
 
 #map { 
   height: 500px; 
   display: block;
-  border: 2px solid #1B0B0A;
+  border: 2px solid #1b0b0a;
   margin-left: 20px;
 }
 
@@ -41,7 +41,7 @@ body {
   width: 600px; 
   height: 500px;
   overflow: auto;
-  border: 2px solid #1B0B0A;
+  border: 2px solid #1b0b0a;
   padding-left: 30px;
   margin-right: 20px;
   background-color: #fff;
@@ -84,18 +84,18 @@ body {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
   text-align: center;
-  color: #1B0B0A;
+  color: #1b0b0a;
 }
 
 .description {
   font-family: 'Asar', serif;
   text-align: center;
   font-size: 18px;
-  color: #1B0B0A;
+  color: #1b0b0a;
 }
 
 #hook {
- background-color: #DE1500;
+ background-color: #de1500;
  padding: 30px 0px 40px 0px;
 }
 
@@ -122,7 +122,7 @@ body {
 #my-list {
   font-family: 'Nunito', sans-serif;
   text-align: center;
-  color: #1B0B0A;
+  color: #1b0b0a;
 }
 
 #restaurant-name {
@@ -139,6 +139,7 @@ body {
 #restaurant {
   font-family: 'Nunito', sans-serif;
   font-size: 24px; 
+  text-transform: capitalize;
 }
 
 .rating {
@@ -147,17 +148,19 @@ body {
 }
 
 .gray {
-  color: #1B0B0A;
+  color: #1b0b0a;
 }
 
 .btn-default {
   outline: none;
-  border: 1px solid #1B0B0A;
+  border: 1px solid #1b0b0a;
   border-radius: 10px;
   margin-left: 5px;
 }
 
-.btn:focus, .btn:active, .btn:active:focus {
+.btn:focus, 
+.btn:active, 
+.btn:active:focus {
   outline: none;
 }
 
@@ -178,7 +181,7 @@ body {
 }
 
 .highlight {
-  background-color: #AFC2D2;
+  background-color: #afc2d2;
 }
 
 #off {
@@ -187,7 +190,7 @@ body {
 
 .asterisk_input:after {
   content:" *"; 
-  color: #DE1500;
+  color: #de1500;
   position: absolute; 
   margin: 8px 0px 0px -30px; 
   font-size: xx-large; 
