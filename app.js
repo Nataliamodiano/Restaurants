@@ -1,7 +1,6 @@
 //get access to submit button and add event listener on click
 var submit = document.getElementById('submit');
 submit.addEventListener('click', getApi, false);
-
 //initiate the map with the center of Los Angeles
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -14,8 +13,7 @@ function initMap() {
     geocodeAddress(geocoder, map);
   });
 }
-
-//defined geocode function
+//defined geocode function to code location input into lat and long coordinates
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementById('location').value;
   geocoder.geocode({'address': address}, function(results, status) {
@@ -26,7 +24,6 @@ function geocodeAddress(geocoder, resultsMap) {
     }
   });
 }
-
 function getApi(e) {
   e.preventDefault();
   //get search box values
@@ -34,12 +31,10 @@ function getApi(e) {
   var location = document.getElementById('location').value;
   var radius = document.getElementById('radius').value || '4828.03';
   var sort = document.getElementById('sort').value || '0';
-
   //clear previous search results 
   while (result.firstChild) {
     result.removeChild(result.firstChild);
   }
-
   var xhr = new XMLHttpRequest();
   xhr.onload = function() {
     if (xhr.status === 200) {
@@ -55,7 +50,6 @@ function getApi(e) {
         scrollwheel: false
       });
       geocodeAddress(geocoder,map);
-
       //loop through all names in the yelp array
       for (i = 0; i < name.length; i++){
         var result = document.getElementById('result');
@@ -70,20 +64,18 @@ function getApi(e) {
         title.setAttribute('id', 'restaurant');
         title.setAttribute('target', '_blank');
         title.textContent = name[i].name;
-        
+        //add link to li
         var addLink = document.createElement('a');
         addLink.setAttribute('id', 'link');
         addLink.textContent = 'Click here to add this restaurant to your list!';
         paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '. Address and phone number: ', name[i].location.address, '. ', name[i].location.city, ', ', name[i].display_phone, '. '].join('');
         paragraph.setAttribute('id', 'locations');
-
         //link turns gray on click
         addLink.addEventListener('click', function() {
           var link = document.getElementById('link');
           this.setAttribute('class', 'gray');
           this.textContent = 'Looking forward to your visit!';
         }, false);
-
         //append results to the page
         result.appendChild(item);
         item.appendChild(title);
@@ -91,19 +83,15 @@ function getApi(e) {
         item.className += "new-li"; 
         title.appendChild(image);
         item.appendChild(addLink);
-        
         //get coordinates
         var latitude = name[i].location.coordinate.latitude;
         var longitude = name[i].location.coordinate.longitude;
         var latLong = {lat: latitude, lng: longitude};
-
-        // added letters to markers
+        //added letters to markers
         var labels = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
         var labelIndex = 0;
         var labelLetter = labels[i][labelIndex++ % labels.length];
-
         item.setAttribute('id', 'marker-' + labelLetter);
-
         //marker images
         var icon1 = "images/icon.png";
         var icon2 = "images/alt-icon.png";
@@ -116,7 +104,6 @@ function getApi(e) {
           label: labelLetter,
           icon: icon1
         });
-
         //mouseover marker to highlight marker and li in results list
         google.maps.event.addListener(marker, 'mouseover', function() {
           this.setIcon(icon2);
@@ -128,15 +115,13 @@ function getApi(e) {
           var restaurant = document.getElementById('marker-' + this.label);
           restaurant.className = 'new-li';
         });
-
-        // mouseover li to highlight marker and make it bounce
+        //mouseover li to highlight marker and make it bounce
         title.addEventListener('mouseover', (function(m) {
           return function(){
             m.setIcon(icon2);
             m.setAnimation(google.maps.Animation.BOUNCE);
           }
         })(marker), false);
-
         title.addEventListener('mouseout', (function(m) {
           return function(){
             m.setIcon(icon1);
