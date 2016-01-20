@@ -59,7 +59,7 @@ body {
   border: 2px solid #1b0b0a;
   padding-left: 30px;
   margin-right: 20px;
-  background-color: #fff;
+  background-color: #e8e27a;
 }
 
 #search-bar {
@@ -140,14 +140,14 @@ body {
 
 #product-description {
   padding: 30px 0px 30px 0px;
-  background-color: #f6a800;
+  background-color: #FFF776;
   padding-top: 20px;
   padding-bottom: 60px;
   margin-bottom: 20px;
 }
 
 .row-one {
-  background-color: rgb(213, 135, 0);
+  background-color: #E2D729;
   transform: skewY(-5deg);
   padding-top: 20px;
   padding-bottom: 20px;
@@ -159,7 +159,7 @@ body {
 
 #row-two {
   transform: skewY(5deg);
-  background-color: #c67900;
+  background-color: #C6BB00;
   padding-top: 20px;
   padding-bottom: 70px;
 }
@@ -255,6 +255,8 @@ body {
 
 .new-li {
   margin-top: 10px;
+  background-color: #e8e27a;
+  padding: 5px 5px 5px 5px;
 }
 
 .highlight {
