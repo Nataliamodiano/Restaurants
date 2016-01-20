@@ -20,6 +20,21 @@ body {
   border-radius: 0px;
 }
 
+#search-link {
+  float: right;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #de1500;
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+#hero{
+  box-shadow: inset 0 0 0 1000px rgba(44,45,48,.6);
+}
+
 #logo {
   font-family: 'Rock Salt', cursive;
   font-size: 36px;
@@ -55,21 +70,30 @@ body {
   width: 23%;
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
-  padding: 2px 2px 2px 5px;
   outline: none;
   text-transform: capitalize;
   font-family: 'Asar', serif;
   font-size: 18px;
   font-weight: 800;
-  padding-top: 5px;
+  height: 43px;
 }
+
+#sort {
+  border: 2px solid;
+  border-color: rgb(238, 238, 238);
+  border-left-color: #9a9a9a;
+  border-top-color: #9a9a9a;
+  padding-bottom: 3px;
+ }
 
 #submit {
   display: block;
   margin-left:auto;
   margin-right:auto; 
-  width: 300px;
+  width: 350px;
   margin-bottom: 40px;
+  background-color: #de1500;
+  color: #fff;
 }
 
 #restaurant-list {
@@ -77,7 +101,12 @@ body {
   overflow: auto;
   width: 100%;
   padding-right: 25%; 
-  padding-left: 10%;
+  padding-left: 15%;
+  padding-top: 110px;
+  margin-bottom: 20px;
+  background-image: url('../images/list.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -85,6 +114,12 @@ body {
   font-weight: 600;
   text-align: center;
   color: #1b0b0a;
+  margin-bottom: 0px;
+}
+
+#my-list {
+  margin-top: -35px;
+  margin-left: 100px;
 }
 
 .description {
@@ -95,8 +130,8 @@ body {
 }
 
 #hook {
- background-color: #de1500;
- padding: 30px 0px 40px 0px;
+  background-color: #de1500;
+  padding: 30px 0px 40px 0px;
 }
 
 .hook-type {
@@ -105,6 +140,28 @@ body {
 
 #product-description {
   padding: 30px 0px 30px 0px;
+  background-color: #f6a800;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  margin-bottom: 20px;
+}
+
+.row-one {
+  background-color: rgb(213, 135, 0);
+  transform: skewY(-5deg);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#one {
+  padding-bottom: 70px;
+}
+
+#row-two {
+  transform: skewY(5deg);
+  background-color: #c67900;
+  padding-top: 20px;
+  padding-bottom: 70px;
 }
 
 #what-is {
@@ -119,15 +176,18 @@ body {
   padding-top: 12px;
 }
 
-#my-list {
+#user-list {
+  display: inline-block;
   font-family: 'Nunito', sans-serif;
-  text-align: center;
+  padding-left: 50px;
+  padding-top: 20px;
   color: #1b0b0a;
 }
 
 #restaurant-name {
   margin-left: 50px;
-  width: 469px;
+  width: 30%;
+  margin-top: 15px;
 }
 
 #locations {
@@ -136,7 +196,7 @@ body {
   margin-bottom: 2px;
 }
 
-.restaurant {
+.restaurants {
   font-family: 'Nunito', sans-serif;
   font-size: 24px; 
   text-transform: capitalize;
@@ -162,6 +222,7 @@ body {
   border: 1px solid #1b0b0a;
   border-radius: 10px;
   margin-left: 5px;
+  border-color: #9a9a9a;
 }
 
 .btn:focus, 
@@ -170,7 +231,8 @@ body {
   outline: none;
 }
 
-.collapse, .in {
+.collapse, 
+.in {
   width: 80%;
   height: 100px;
   border-radius: 10px;
@@ -178,8 +240,17 @@ body {
 }
 
 #scroll {
-  color: #a00f00;
+  display: block;
+  color: #de1500;
   margin-top: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 10px 0px 10px 50px;
+}
+
+#scroll-background {
+  background-color: #1b0b0a;
 }
 
 .new-li {
@@ -206,6 +277,14 @@ body {
 #link {
   font-family: 'Asar', serif;
   font-size: 18px;
+}
+
+#add-restaurant {
+  margin-left: 5px;
+  border-radius: 30px;
+  background-color: #de1500;
+  border-color: #de1500;
+  color: #fff;
 }
 
 @media screen and (max-width:1199px) {
@@ -243,11 +322,6 @@ body {
 
   #restaurant-name {
     width: 40%;
-  }
-
-  #add-restaurant {
-    width: 23%;
-    margin-left: 15px;
   }
 }
 
@@ -287,6 +361,10 @@ body {
     padding-left: 10%;
     padding-right: 10%;
   }
+
+  #my-list {
+    margin-left: 0px;
+  }
 }
 
 @media screen and (max-width:770px) {
@@ -311,14 +389,14 @@ body {
     margin: 10px 10px 10px 10px;
     padding: 2px 2px 2px 5px;
   }
-
+/*
   #add-restaurant {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
     margin-bottom: 40px;
-  }
+  }*/
 
   #restaurant-list {
     height: 400px;

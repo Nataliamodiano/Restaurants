@@ -14,7 +14,7 @@ function typeName() {
   restaurantList.appendChild(item);
   item.appendChild(title);
   item.appendChild(remove);
-  title.setAttribute('class', 'restaurant');
+  title.setAttribute('class', 'restaurants');
   //delete item on button click
   remove.addEventListener('click', removeItem, false);
   function removeItem() {
