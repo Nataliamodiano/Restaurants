@@ -15,11 +15,15 @@ Built using:
   - Express
   - Ajax
 
-![restaurants-product-description](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home.png?raw=true)
+![home](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home.png?raw=true)
 
-![search](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home-two.png?raw=true)
+![home-two](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home-two.png?raw=true)
 
-![results](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/highlight.png?raw=true)
+Search Results:
+
+![search](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/highlight.png?raw=true)
+
+Result item added to list:
 
 ![list](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/manually-add-item.png?raw=true)
 
