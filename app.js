@@ -29,7 +29,7 @@ function getApi(e) {
   //get search box values
   var find = document.getElementById('find').value;
   var location = document.getElementById('location').value;
-  var radius = document.getElementById('radius').value || '4828.03';
+  var radius = '4828.03';
   var sort = document.getElementById('sort').value || '0';
   //clear previous search results 
   while (result.firstChild) {
