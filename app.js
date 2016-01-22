@@ -29,7 +29,7 @@ function getApi(e) {
   //get search box values
   var find = document.getElementById('find').value;
   var location = document.getElementById('location').value;
-  var radius = document.getElementById('radius').value || '4828.03';
+  var radius = '4828.03';
   var sort = document.getElementById('sort').value || '0';
   //clear previous search results 
   while (result.firstChild) {
@@ -63,6 +63,7 @@ function getApi(e) {
         title.setAttribute('href', name[i].mobile_url);
         title.setAttribute('id', 'restaurant');
         title.setAttribute('target', '_blank');
+        title.setAttribute('class', 'list-group-item-heading');
         title.textContent = name[i].name;
         //add link to li
         var addLink = document.createElement('a');
@@ -70,6 +71,7 @@ function getApi(e) {
         addLink.textContent = 'Click here to add this restaurant to your list!';
         paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '. Address and phone number: ', name[i].location.address, '. ', name[i].location.city, ', ', name[i].display_phone, '. '].join('');
         paragraph.setAttribute('id', 'locations');
+        paragraph.setAttribute('class', 'list-group-item-text');
         //link turns gray on click
         addLink.addEventListener('click', function() {
           var link = document.getElementById('link');
@@ -80,7 +82,7 @@ function getApi(e) {
         result.appendChild(item);
         item.appendChild(title);
         item.appendChild(paragraph);
-        item.className += "new-li"; 
+        item.className += "new-li list-group-item"; 
         title.appendChild(image);
         item.appendChild(addLink);
         //get coordinates
@@ -108,12 +110,12 @@ function getApi(e) {
         google.maps.event.addListener(marker, 'mouseover', function() {
           this.setIcon(icon2);
           var restaurant = document.getElementById('marker-' + this.label);
-          restaurant.className = 'new-li highlight';
+          restaurant.className = 'new-li highlight list-group-item';
         });
         google.maps.event.addListener(marker, 'mouseout', function() {
           this.setIcon(icon1);
           var restaurant = document.getElementById('marker-' + this.label);
-          restaurant.className = 'new-li';
+          restaurant.className = 'new-li list-group-item';
         });
         //mouseover li to highlight marker and make it bounce
         title.addEventListener('mouseover', (function(m) {

@@ -20,9 +20,9 @@ yelpRouter.get('/:term/:location/:radius/:sort', function(req, res) {
     {
       term: req.params.term,
       location: req.params.location,
-      limit: '20',
+      limit: '10',
       sort: req.params.sort,
-      radius_filter: req.params.radius
+      // radius_filter: req.params.radius
   }).then(function (data) {
     res.send(data);
   }); 

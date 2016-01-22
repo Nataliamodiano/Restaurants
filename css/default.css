@@ -1,145 +1,61 @@
-body {
-  background-color: #f5f5f1;
-}
-
-.container {
-  width: 1200px;
-  margin: 0px auto;
-  padding: 0px 0px 0px 0px;
-  background-color: #fff;
-}
-
 .row {
-  width: 1200px;
-  margin: 0px 0px 0px 0px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
-.navbar {
-  background-color: #1b0b0a;
-  padding-left: 20px;
-  border-radius: 0px;
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
-#logo {
-  font-family: 'Rock Salt', cursive;
-  font-size: 36px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: #de1500;
-  font-weight: 500;
-}
-
-#map { 
-  height: 500px; 
-  display: block;
-  border: 2px solid #1b0b0a;
-  margin-left: 20px;
-}
-
-#result {
-  display: block;
-  width: 600px; 
-  height: 500px;
-  overflow: auto;
-  border: 2px solid #1b0b0a;
-  padding-left: 30px;
-  margin-right: 20px;
-  background-color: #fff;
-}
-
-#search-bar {
-  width: 100%;
-}
-
-.input {
-  width: 23%;
-  border-radius: 10px;
-  margin: 10px 10px 10px 10px;
-  padding: 2px 2px 2px 5px;
-  outline: none;
-  text-transform: capitalize;
-  font-family: 'Asar', serif;
-  font-size: 18px;
-  font-weight: 800;
-  padding-top: 5px;
-}
-
-#submit {
-  display: block;
-  margin-left:auto;
-  margin-right:auto; 
-  width: 300px;
-  margin-bottom: 40px;
-}
-
-#restaurant-list {
+/*hero and header*/
+.hero {
   height: 600px;
-  overflow: auto;
-  width: 100%;
-  padding-right: 25%; 
-  padding-left: 10%;
-}
-
-.title {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
-  text-align: center;
-  color: #1b0b0a;
-}
-
-.description {
-  font-family: 'Asar', serif;
-  text-align: center;
-  font-size: 18px;
-  color: #1b0b0a;
+  background-image: url(../images/burgers.jpg);
+  background-position: center center;
+  background-size: cover;
 }
 
 #hook {
- background-color: #de1500;
- padding: 30px 0px 40px 0px;
+  background-color: rgba(0,0,0,.5);
+  height: 600px; 
 }
 
 .hook-type {
-  color: #f5f5f1;
+  color: #fff;
 }
 
-#product-description {
-  padding: 30px 0px 30px 0px;
+#logo {
+  margin-top: 0px;
+  color: #fff;
 }
 
-#what-is {
-  margin-bottom: 20px;
+/*search boxes*/
+.input {
+  display: block;
 }
 
-#search {
-  padding-top: 2px;
+/*results and body*/
+#result {
+  padding: 15px 15px 15px 15px;
+  border-radius: 4px;
+  border: solid;
+  height: 400px;
+  border-color: #ddd;
+  overflow: auto; 
 }
 
-#view {
-  padding-top: 12px;
+ol > li {
+  list-style-type: upper-alpha;
+  list-style-position: inside;
 }
 
-#my-list {
-  font-family: 'Nunito', sans-serif;
+.title {
   text-align: center;
-  color: #1b0b0a;
 }
 
-#restaurant-name {
-  margin-left: 50px;
-  width: 469px;
-}
-
-#locations {
-  font-family: 'Asar', serif;
-  font-size: 18px;
-  margin-bottom: 2px;
-}
-
-#restaurant {
-  font-family: 'Nunito', sans-serif;
-  font-size: 24px; 
-  text-transform: capitalize;
+.list-group-item {
+  display: list-item !important;
 }
 
 .rating {
@@ -147,190 +63,36 @@ body {
   margin-top: 10px;
 }
 
-.gray {
-  color: #1b0b0a;
-}
-
-.btn-default {
-  outline: none;
-  border: 1px solid #1b0b0a;
-  border-radius: 10px;
-  margin-left: 5px;
-}
-
-.btn:focus, 
-.btn:active, 
-.btn:active:focus {
-  outline: none;
-}
-
-.collapse, .in {
-  width: 80%;
-  height: 100px;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-#scroll {
-  color: #a00f00;
-  margin-top: 20px;
-}
-
-.new-li {
-  margin-top: 10px;
-}
-
 .highlight {
   background-color: #afc2d2;
 }
 
-#off {
-  background-color: #fff;
+.gray {
+  color: #1b0b0a;
+}
+
+#map {
+  height: 400px;
 }
 
 .asterisk_input:after {
   content:" *"; 
-  color: #de1500;
+  color: #DE1500;
   position: absolute; 
-  margin: 8px 0px 0px -30px; 
+  margin: -50px 0px 0px 0px; 
   font-size: xx-large; 
   padding: 0 5px 0 0; 
 }
 
-#link {
-  font-family: 'Asar', serif;
-  font-size: 18px;
+/*footer*/
+footer {
+  height: 50px;
+  background-image: url(../images/burgers.jpg);
+  background-position: center center;
+  background-size: cover;
 }
 
-@media screen and (max-width:1199px) {
-  .container {
-    width: 100%;
-  }
-
-  .row {
-    width: 100%;
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  #map { 
-    height: 500px;
-    width: 50%; 
-    display: block;
-    margin-left: 0px;
-  }
-
-  #result {
-    display: block;
-    width: 50%; 
-    margin-right: 0px;
-  }
-
-  .title {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 400;
-  }
-
-  .btn-default {
-    margin-left: 0px;
-  }
-
-  #restaurant-name {
-    width: 40%;
-  }
-
-  #add-restaurant {
-    width: 23%;
-    margin-left: 15px;
-  }
-}
-
-@media screen and (max-width:1160px) {
-  .input,
-  #restaurant-name {
-    width: 22.5%;
-    padding: 2px 2px 2px 5px;
-  }
-
-  #restaurant-name {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width:991px) {
-  .row-one {
-    background-color: #f5f5f1;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  #row-two {
-    background-color: #fff;
-  }
-
-  .col-sm-12 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  #restaurant-name {
-    width: 40%;
-  }
-
-  #restaurant-list {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-}
-
-@media screen and (max-width:770px) {
-  .container {
-    width: 100%;
-  }
-
-  #map { 
-    height: 400px;
-    width: 100%; 
-    display: block;
-  }
-
-  #result {
-    display: block;
-    width: 100%; 
-  }
-
-  .input,
-  #restaurant-name {
-    width: 98%;
-    margin: 10px 10px 10px 10px;
-    padding: 2px 2px 2px 5px;
-  }
-
-  #add-restaurant {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    margin-bottom: 40px;
-  }
-
-  #restaurant-list {
-    height: 400px;
-    width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
-  #what-is {
-    margin-bottom: 40px;
-  }
-
-  .asterisk_input:after {
-    content:" *"; 
-    color: #DE1500;
-    position: absolute; 
-    margin: -50px 0px 0px 0px; 
-    font-size: xx-large; 
-    padding: 0 5px 0 0; 
-  }
+#shaddow {
+  height: 50px;
+  background-color: rgba(0,0,0,.5);
 }
