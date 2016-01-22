@@ -35,6 +35,17 @@
   display: block;
 }
 
+#search-bar {
+  float: left;
+}
+
+.input, 
+button {
+  border-radius: 4px !important;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
 /*results and body*/
 #result {
   padding: 15px 15px 15px 15px;
@@ -58,6 +69,10 @@ ol > li {
   display: list-item !important;
 }
 
+ul > li > .list-group-item {
+  border-radius: 4px !important;
+}
+
 .rating {
   float: right;
   margin-top: 10px;
@@ -71,28 +86,33 @@ ol > li {
   color: #1b0b0a;
 }
 
+.my-list {
+  padding: 15px 15px 15px 15px;
+  border-radius: 4px;
+  border: solid;
+  height: 400px;
+  border-color: #ddd;
+  overflow: auto; 
+  text-transform: capitalize;
+}
+
+#restaurant-list {
+  list-style-type: none;
+}
+
 #map {
   height: 400px;
 }
 
-.asterisk_input:after {
-  content:" *"; 
-  color: #DE1500;
-  position: absolute; 
-  margin: -50px 0px 0px 0px; 
-  font-size: xx-large; 
-  padding: 0 5px 0 0; 
-}
-
 /*footer*/
 footer {
-  height: 50px;
+  height: 60px;
   background-image: url(../images/burgers.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 #shaddow {
-  height: 50px;
+  height: 60px;
   background-color: rgba(0,0,0,.5);
 }

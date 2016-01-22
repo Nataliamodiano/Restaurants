@@ -63,7 +63,7 @@ function getApi(e) {
         title.setAttribute('href', name[i].mobile_url);
         title.setAttribute('id', 'restaurant');
         title.setAttribute('target', '_blank');
-        title.setAttribute('class', 'list-group-item-heading');
+        title.setAttribute('class', 'h4');
         title.textContent = name[i].name;
         //add link to li
         var addLink = document.createElement('a');

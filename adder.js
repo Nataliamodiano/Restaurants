@@ -5,7 +5,7 @@ function typeName() {
   var restaurantName = document.getElementById('restaurant-name').value;
   var restaurantList = document.getElementById('restaurant-list');
   var item = document.createElement('li');
-  var title = document.createElement('h3');
+  var title = document.createElement('h4');
   var remove = document.createElement('input');
   remove.setAttribute('type', 'button');
   remove.setAttribute('value', 'Delete');
@@ -15,6 +15,7 @@ function typeName() {
   item.appendChild(title);
   item.appendChild(remove);
   title.setAttribute('class', 'restaurant');
+  title.setAttribute('class', 'list-group-item');
   //delete item on button click
   remove.addEventListener('click', removeItem, false);
   function removeItem() {
