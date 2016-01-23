@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rock+Salt' type='text/css'>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Asar' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/default.css">
   </head>
   <body class="container-fluid">
@@ -24,7 +23,7 @@
     <div class="title h1 row">Let's eat at...</div>
 
     <!-- search bars -->
-    <div class="row">
+    <div class="row" id="search-bars">
       <div class="col-sm-2"></div>
       <form class="input-group col-sm-3" id="search-bar">
         <h3>Search Yelp</h3>
@@ -48,15 +47,15 @@
     </div>
 
     <!-- search results -->
-    <div class="row" id="result-list">
+    <div class="row" id="lists">
       <div class="col-sm-1"></div>
-      <div class="col-sm-5">
+      <div class="col-sm-5" id="result-list">
         <h3>Search results:</h3>
         <ol class="list-group" id="result"></ol>
       </div>
         
       <!-- list of selections -->
-      <div class="col-sm-5">
+      <div class="col-sm-5" id="manual-list">
         <h3>My List:</h3>
         <ul class="row list-group my-list" id="restaurant-list"></ul>
       </div>
@@ -75,7 +74,7 @@
     <!-- footer -->
     <footer>
       <div id="shaddow">
-        <a href="#logo" type="button" id="scroll">Scroll to Top of Page</a>
+        <a href="#logo" class="h3" type="button" id="scroll">Scroll to top</a>
       </div>
     </footer class="row"> 
     

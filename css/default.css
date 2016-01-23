@@ -1,3 +1,7 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .row {
   margin-right: 0px;
   margin-left: 0px;
@@ -52,6 +56,10 @@
 }
 
 /*search boxes*/
+#search-bars {
+  margin-bottom: 20px;
+}
+
 .input {
   display: block;
 }
@@ -75,8 +83,21 @@ button {
 }
 
 /*results and body*/
-#result-list{
+#lists {
   display: none;
+}
+
+#result-list {
+  display: none;
+}
+
+#manual-list {
+  display: none;
+}
+
+.center-block {
+  margin-right: 60px;
+  margin-left: 60px;
 }
 
 #result {
@@ -154,4 +175,10 @@ footer {
 #shaddow {
   height: 60px;
   background-color: rgba(0,0,0,.5);
+  padding-top: 15px;
+}
+
+#scroll {
+  color: #fff; 
+  margin-left: 45px;
 }

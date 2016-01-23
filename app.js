@@ -29,7 +29,7 @@ function getApi(e) {
   //get search box values
   var find = document.getElementById('find').value;
   var location = document.getElementById('location').value;
-  var radius = '4828.03';
+  var radius = '16093.4';
   var sort = document.getElementById('sort').value || '0';
   //clear previous search results 
   while (result.firstChild) {
@@ -118,13 +118,13 @@ function getApi(e) {
           restaurant.className = 'new-li list-group-item';
         });
         //mouseover li to highlight marker and make it bounce
-        title.addEventListener('mouseover', (function(m) {
+        item.addEventListener('mouseover', (function(m) {
           return function(){
             m.setIcon(icon2);
             m.setAnimation(google.maps.Animation.BOUNCE);
           }
         })(marker), false);
-        title.addEventListener('mouseout', (function(m) {
+        item.addEventListener('mouseout', (function(m) {
           return function(){
             m.setIcon(icon1);
             m.setAnimation(null);
