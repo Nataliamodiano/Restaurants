@@ -4,7 +4,7 @@ submit.addEventListener('click', getApi, false);
 //initiate the map with the center of Los Angeles
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
+    zoom: 12,
     center: {lat: 34.052235, lng: -118.243683},
     scrollwheel: false
   });
@@ -29,7 +29,7 @@ function getApi(e) {
   //get search box values
   var find = document.getElementById('find').value;
   var location = document.getElementById('location').value;
-  var radius = '16093.4';
+  var radius = '4828.03';
   var sort = document.getElementById('sort').value || '0';
   //clear previous search results 
   while (result.firstChild) {

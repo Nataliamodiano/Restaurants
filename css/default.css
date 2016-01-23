@@ -128,7 +128,6 @@ ul > li > .list-group-item {
 
 .rating {
   float: right;
-  margin-top: 10px;
 }
 
 .highlight {
@@ -161,7 +160,7 @@ textarea {
 }
 
 #map {
-  height: 400px;
+  height: 300px;
 }
 
 /*footer*/
