@@ -14,6 +14,7 @@
     <!-- hero -->
     <header class="hero row" alt="Image of a sliders.">
       <div id="hook">
+        <div id="margin"></div>
         <h1 id="logo">Let's Eat...</h1>
         <h3 class="hook-type">Struggle with finding places to eat?</h3>
         <h4 class="hook-type">Use Let's Eat... to create a list of restaurants for readily available options.</h4> 
@@ -47,7 +48,7 @@
     </div>
 
     <!-- search results -->
-    <div class="row">
+    <div class="row" id="result-list">
       <div class="col-sm-1"></div>
       <div class="col-sm-5">
         <h3>Search results:</h3>
@@ -63,11 +64,11 @@
     </div>
 
     <!-- share list -->
-    <div class="row">
+    <!-- <div class="row"> -->
       <!-- Twitter -->
-      <a href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
-    </div>
-    
+      <!-- <a href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+    </div> -->
+
     <!-- map -->
     <div class="row" id="map"></div>
     
@@ -82,5 +83,6 @@
     <script src="app.js" type="text/javascript"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0OuluWj8gQFySi3QmUypDaUok5CCmVqM&callback=initMap"></script>
     <script src="adder.js" type="text/javascript"></script>
+    <script src="show-results.js" type="text/javascript"></script>
   </body>
 </html>

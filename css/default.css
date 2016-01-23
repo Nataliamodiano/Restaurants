@@ -28,6 +28,27 @@
 #logo {
   margin-top: 0px;
   color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 72px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  padding-top: 100px;
+  display: block;
+  padding: 0.2em 0.5em;
+  border: white solid 10px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#margin {
+  padding-top: 100px;
+}
+
+.hook-type {
+  text-align: center;
 }
 
 /*search boxes*/
@@ -46,7 +67,18 @@ button {
   text-transform: capitalize;
 }
 
+#add-restaurant,
+#submit {
+  background-color: #de1500;
+  color: #fff;
+  border-color: #de1500;
+}
+
 /*results and body*/
+#result-list{
+  display: none;
+}
+
 #result {
   padding: 15px 15px 15px 15px;
   border-radius: 4px;
@@ -86,6 +118,7 @@ ul > li > .list-group-item {
   color: #1b0b0a;
 }
 
+/*my list*/
 .my-list {
   padding: 15px 15px 15px 15px;
   border-radius: 4px;
@@ -94,6 +127,12 @@ ul > li > .list-group-item {
   border-color: #ddd;
   overflow: auto; 
   text-transform: capitalize;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 4px;
+  border-color: #ddd;
 }
 
 #restaurant-list {
