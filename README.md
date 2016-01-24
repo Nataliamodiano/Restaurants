@@ -15,6 +15,7 @@ Built using:
   - Node 
   - Express
   - Ajax
+  - jQuery
 
 ![home](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home.png?raw=true)
 
