@@ -24,7 +24,7 @@ Search Results:
 
 ![search](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/search.jpg?raw=true)
 
-Result item added to list:
+Result item highlight function and added to list:
 
 ![highlight](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/highlight.png?raw=true)
 
