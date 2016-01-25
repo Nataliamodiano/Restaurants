@@ -18,22 +18,16 @@ Built using:
   - Ajax
   - jQuery
 
-![home](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home.png?raw=true)
-
-![home-two](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home-two.png?raw=true)
+![home](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home.jpg?raw=true)
 
 Search Results:
 
-![search](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/highlight.png?raw=true)
+![search](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/search.jpg?raw=true)
 
 Result item added to list:
 
-![home](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home.png?raw=true)
+![highlight](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/highlight.png?raw=true)
 
-![home-two](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home-two.png?raw=true)
-
-![search](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/highlight.png?raw=true)
-
-![list](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/manually-add-item.png?raw=true)
+![list](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/manual-add.png?raw=true)
 
 - Functionality that still needs to be built: social media share buttons. 
