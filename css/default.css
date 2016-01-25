@@ -91,8 +91,10 @@ button {
   display: none;
 }
 
-#manual-list {
-  display: none;
+#manual-list,
+#search-results {
+  font-weight: 600;
+  color: #333333;
 }
 
 .center-block {
@@ -168,7 +170,9 @@ textarea {
 }
 
 #map {
-  height: 300px;
+  margin-top: 42px;
+  height: 400px;
+  border-radius: 4px;
 }
 
 .restaurants {
@@ -192,4 +196,50 @@ footer {
 #scroll {
   color: #fff; 
   margin-left: 45px;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #search-bar {
+    float: none;
+  }
+}
+
+@media (max-width: 606px) {
+  #logo {
+    padding: 0px 0px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
+    width: 500px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .input-group {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 499px) {
+  #logo {
+    max-width: 360px;
+    padding: 0px 0px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
+    width: 500px;
+    text-align: center;
+  }
+  .hook-type {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }

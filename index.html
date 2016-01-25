@@ -49,40 +49,49 @@
     <div class="row" id="lists">
       <div class="col-sm-1"></div>
       <div class="col-sm-5" id="result-list">
-        <h3>Search results:</h3>
-        <ol class="list-group" id="result"></ol>
-      </div>
-      <!-- list of selections -->
-      <div class="col-sm-5" id="manual-list">
-        <h3 id="my-list-title">My List:</h3>
-        <ul class="list-group my-list" id="restaurant-list">
-          <div id="share">
-            <!-- Twitter -->
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world">Tweet</a>
-            <!-- facbook share button -->
-            <div id="fb-root"></div>
-            <div class="fb-share-button" data-href="http://localhost:8080/" data-layout="button"></div>
-          </div>
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          
+          <li role="presentation" class="active">
+            <a href="#result" id="search-results" aria-controls="search-results" role="tab" data-toggle="tab">Search results:</a>
+          </li>
+          <li role="presentation">
+            <a href="#restaurant-list" aria-controls="my-list" role="tab" data-toggle="tab" id="manual-list">My List:</a>
+          </li>
         </ul>
+        <!-- Result list tab panel -->
+        <div class="tab-content">
+          <ol role="tabpanel" class="list-group tab-pane fade in active" id="result"></ol>
+          <!-- My list tab panel -->
+          <ul role="tabpanel" class="list-group my-list tab-pane fade" id="restaurant-list">
+            <div id="share">
+              <!-- Twitter -->
+              <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world">Tweet</a>
+              <!-- facbook share button -->
+              <div id="fb-root"></div>
+              <div class="fb-share-button" data-href="http://localhost:8080/" data-layout="button"></div>
+            </div>
+          </ul>
+        </div>
       </div>
+      <!-- map -->
+      <div class="col-sm-5" id="map"></div>
       <div class="col-sm-1"></div>
     </div>
-    <!-- map -->
-    <div class="row" id="map"></div>
     <!-- footer -->
-    <footer>
+    <footer class="row">
       <div id="shaddow">
-        <a href="#logo" class="h3" type="button" id="scroll">Scroll to top</a>
       </div>
-    </footer class="row"> 
+    </footer> 
     <!-- javascript -->
     <script src="app.js" type="text/javascript"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0OuluWj8gQFySi3QmUypDaUok5CCmVqM&callback=initMap"></script>
     <script src="adder.js" type="text/javascript"></script>
-    <script src="show-results.js" type="text/javascript"></script>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="smoothscroll.js"></script>
     <script type="text/javascript" src="share.js"></script>
+    <script src="show-results.js" type="text/javascript"></script>
   </body>
 </html>
