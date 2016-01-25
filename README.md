@@ -10,12 +10,9 @@ Built using:
   - HTML5, CSS3, Bootstrap 3 
   - JavaScript
   - Node Yelp API
-<<<<<<< HEAD
   - Google Maps API
   - Google Fonts API 
-=======
   - Google Maps API 
->>>>>>> master
   - Node 
   - Express
   - Ajax
@@ -25,13 +22,12 @@ Built using:
 
 ![home-two](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home-two.png?raw=true)
 
-<<<<<<< HEAD
 Search Results:
 
 ![search](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/highlight.png?raw=true)
 
 Result item added to list:
-=======
+
 ![home](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home.png?raw=true)
 
 ![home-two](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/home-two.png?raw=true)
@@ -43,6 +39,5 @@ Search Results:
 Result item added to list:
 
 ![list](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/manually-add-item.png?raw=true)
->>>>>>> master
 
 - Functionality that still needs to be built: adding a database to save user's list and notes. 
