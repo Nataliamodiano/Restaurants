@@ -14,8 +14,12 @@ function typeName() {
   restaurantList.appendChild(item);
   item.appendChild(title);
   item.appendChild(remove);
+<<<<<<< HEAD
   title.setAttribute('class', 'restaurant');
   title.setAttribute('class', 'list-group-item');
+=======
+  title.setAttribute('class', 'restaurants');
+>>>>>>> master
   //delete item on button click
   remove.addEventListener('click', removeItem, false);
   function removeItem() {

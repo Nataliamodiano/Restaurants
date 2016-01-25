@@ -20,9 +20,34 @@ body {
   background-size: cover;
 }
 
+<<<<<<< HEAD
 #hook {
   background-color: rgba(0,0,0,.5);
   height: 600px; 
+=======
+#search-link {
+  float: right;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #de1500;
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+#hero{
+  box-shadow: inset 0 0 0 1000px rgba(44,45,48,.6);
+}
+
+#logo {
+  font-family: 'Rock Salt', cursive;
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #de1500;
+  font-weight: 500;
+>>>>>>> master
 }
 
 .hook-type {
@@ -40,17 +65,28 @@ body {
   margin-bottom: 20px;
   padding-top: 100px;
   display: block;
+<<<<<<< HEAD
   padding: 0.2em 0.5em;
   border: #fff solid 10px;
   width: 600px;
   margin-left: auto;
   margin-right: auto;
+=======
+  width: 600px; 
+  height: 500px;
+  overflow: auto;
+  border: 2px solid #1b0b0a;
+  padding-left: 30px;
+  margin-right: 20px;
+  background-color: #e8e27a;
+>>>>>>> master
 }
 
 #margin {
   padding-top: 100px;
 }
 
+<<<<<<< HEAD
 .hook-type {
   text-align: center;
 }
@@ -66,6 +102,62 @@ body {
 
 #search-bar {
   float: left;
+=======
+.input {
+  width: 23%;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  outline: none;
+  text-transform: capitalize;
+  font-family: 'Asar', serif;
+  font-size: 18px;
+  font-weight: 800;
+  height: 43px;
+}
+
+#sort {
+  border: 2px solid;
+  border-color: rgb(238, 238, 238);
+  border-left-color: #9a9a9a;
+  border-top-color: #9a9a9a;
+  padding-bottom: 3px;
+ }
+
+#submit {
+  display: block;
+  margin-left:auto;
+  margin-right:auto; 
+  width: 350px;
+  margin-bottom: 40px;
+  background-color: #de1500;
+  color: #fff;
+}
+
+#restaurant-list {
+  height: 600px;
+  overflow: auto;
+  width: 100%;
+  padding-right: 25%; 
+  padding-left: 15%;
+  padding-top: 110px;
+  margin-bottom: 20px;
+  background-image: url('../images/list.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #1b0b0a;
+  margin-bottom: 0px;
+}
+
+#my-list {
+  margin-top: -35px;
+  margin-left: 100px;
+>>>>>>> master
 }
 
 .input, 
@@ -75,11 +167,17 @@ button {
   text-transform: capitalize;
 }
 
+<<<<<<< HEAD
 #add-restaurant,
 #submit {
   background-color: #de1500;
   color: #fff;
   border-color: #de1500;
+=======
+#hook {
+  background-color: #de1500;
+  padding: 30px 0px 40px 0px;
+>>>>>>> master
 }
 
 /*results and body*/
@@ -87,8 +185,35 @@ button {
   display: none;
 }
 
+<<<<<<< HEAD
 #result-list {
   display: none;
+=======
+#product-description {
+  padding: 30px 0px 30px 0px;
+  background-color: #FFF776;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  margin-bottom: 20px;
+}
+
+.row-one {
+  background-color: #E2D729;
+  transform: skewY(-5deg);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#one {
+  padding-bottom: 70px;
+}
+
+#row-two {
+  transform: skewY(5deg);
+  background-color: #C6BB00;
+  padding-top: 20px;
+  padding-bottom: 70px;
+>>>>>>> master
 }
 
 #manual-list {
@@ -109,6 +234,7 @@ button {
   overflow: auto; 
 }
 
+<<<<<<< HEAD
 ol > li {
   list-style-type: upper-alpha;
   list-style-position: inside;
@@ -116,14 +242,41 @@ ol > li {
 
 .title {
   text-align: center;
+=======
+#user-list {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  padding-left: 50px;
+  padding-top: 20px;
+  color: #1b0b0a;
+}
+
+#restaurant-name {
+  margin-left: 50px;
+  width: 30%;
+  margin-top: 15px;
+>>>>>>> master
 }
 
 .list-group-item {
   display: list-item !important;
 }
 
+<<<<<<< HEAD
 ul > li > .list-group-item {
   border-radius: 4px !important;
+=======
+.restaurants {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px; 
+  text-transform: capitalize;
+}
+
+#restaurant {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px; 
+  text-transform: capitalize;
+>>>>>>> master
 }
 
 .rating {
@@ -138,14 +291,24 @@ ul > li > .list-group-item {
   color: #1b0b0a;
 }
 
+<<<<<<< HEAD
 #share {
   display: flex;
+=======
+.btn-default {
+  outline: none;
+  border: 1px solid #1b0b0a;
+  border-radius: 10px;
+  margin-left: 5px;
+  border-color: #9a9a9a;
+>>>>>>> master
 }
 
 .fb-share-button {
   margin-left: 10px;
 }
 
+<<<<<<< HEAD
 /*my list*/
 .my-list {
   padding: 15px 15px 15px 15px;
@@ -165,6 +328,34 @@ textarea {
 
 #restaurant-list {
   list-style-type: none;
+=======
+.collapse, 
+.in {
+  width: 80%;
+  height: 100px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#scroll {
+  display: block;
+  color: #de1500;
+  margin-top: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 10px 0px 10px 50px;
+}
+
+#scroll-background {
+  background-color: #1b0b0a;
+}
+
+.new-li {
+  margin-top: 10px;
+  background-color: #e8e27a;
+  padding: 5px 5px 5px 5px;
+>>>>>>> master
 }
 
 #map {
@@ -185,7 +376,153 @@ footer {
   padding-top: 15px;
 }
 
+<<<<<<< HEAD
 #scroll {
   color: #fff; 
   margin-left: 45px;
+=======
+#link {
+  font-family: 'Asar', serif;
+  font-size: 18px;
+}
+
+#add-restaurant {
+  margin-left: 5px;
+  border-radius: 30px;
+  background-color: #de1500;
+  border-color: #de1500;
+  color: #fff;
+}
+
+@media screen and (max-width:1199px) {
+  .container {
+    width: 100%;
+  }
+
+  .row {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  #map { 
+    height: 500px;
+    width: 50%; 
+    display: block;
+    margin-left: 0px;
+  }
+
+  #result {
+    display: block;
+    width: 50%; 
+    margin-right: 0px;
+  }
+
+  .title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+  }
+
+  .btn-default {
+    margin-left: 0px;
+  }
+
+  #restaurant-name {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:1160px) {
+  .input,
+  #restaurant-name {
+    width: 22.5%;
+    padding: 2px 2px 2px 5px;
+  }
+
+  #restaurant-name {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .row-one {
+    background-color: #f5f5f1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #row-two {
+    background-color: #fff;
+  }
+
+  .col-sm-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #restaurant-name {
+    width: 40%;
+  }
+
+  #restaurant-list {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  #my-list {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width:770px) {
+  .container {
+    width: 100%;
+  }
+
+  #map { 
+    height: 400px;
+    width: 100%; 
+    display: block;
+  }
+
+  #result {
+    display: block;
+    width: 100%; 
+  }
+
+  .input,
+  #restaurant-name {
+    width: 98%;
+    margin: 10px 10px 10px 10px;
+    padding: 2px 2px 2px 5px;
+  }
+/*
+  #add-restaurant {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    margin-bottom: 40px;
+  }*/
+
+  #restaurant-list {
+    height: 400px;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  #what-is {
+    margin-bottom: 40px;
+  }
+
+  .asterisk_input:after {
+    content:" *"; 
+    color: #DE1500;
+    position: absolute; 
+    margin: -50px 0px 0px 0px; 
+    font-size: xx-large; 
+    padding: 0 5px 0 0; 
+  }
+>>>>>>> master
 }

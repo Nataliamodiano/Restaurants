@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/default.css">
   </head>
+<<<<<<< HEAD
   <body class="container-fluid">
     <!-- hero -->
     <header class="hero row" alt="Image of a sliders.">
@@ -37,6 +38,68 @@
         <a href="#my-list-title">
           <button class="input btn btn-default form-control" id="submit">Search</button>
         </a>
+=======
+  <body>
+    <div class="container">
+      <!-- navbar -->
+      <nav class="row navbar">
+        <div class="col-sm-6 col-sm-10" id="logo">Let's Eat...</div>
+        <a href="#search-bar" class="col-xs-4 col-sm-2" id="search-link">Search</a>
+      </nav>
+      <!-- hero image -->
+      <div id="hero" >
+        <img class="img-responsive" src="images/toms-restaurant.jpg" alt="Image of a restaurant.">
+      </div>
+      <!-- product description -->
+      <div class="container">
+        <div class="row" id="hook">
+          <div class="title h1 hook-type">Struggle with finding places to eat?</div>
+          <h2 class="title hook-type">Use Let's Eat... to create a list of restaurants for readily available options.</h2> 
+        </div>
+        <div class="row" id="product-description">
+          <h1 class="title" id="what-is">What is Let's Eat...</h1>
+          <div class="col-sm-12 col-md-1"></div>
+          <div class="col-sm-12 col-md-10">
+            <div class="col-sm-12 col-md-4 row-one" id="one">
+              <img class="center-block" src="images/search.png" alt="magnifying glass icon">
+              <h2 class="title" id="search">Search</h2>
+              <p class="description">Search for types of food or restaurants in a city you desire.</p>
+            </div>
+            <div class="col-sm-12 col-md-4" id="row-two">
+              <img class="center-block" src="images/view.png" alt="glasses icon">
+              <h2 class="title" id="view">View</h2>
+              <p class="description">View search results and their markers on Google Maps.</p>
+            </div>
+            <div class="col-sm-12 col-md-4 row-one">
+              <img class="center-block" src="images/click.png" alt="mouse click icon">
+              <h2 class="title">Click</h2>
+              <p class="description">Click on restaurant names to view their yelp page and add them to your list of restaurants you would like to visit in the future.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-1"></div>
+        </div>
+      </div>
+      <!-- list of selections -->
+      <h2 id="user-list">Let's eat at...</h2>
+      <input class="input" id="restaurant-name" type="text" placeholder="Add your own restaurant name">
+      <button id="add-restaurant">+</button>
+      <!-- <div class="title h1" id="my-list">My List</div> -->
+      <ul class="center-block row" id="restaurant-list">
+<div class="title h1" id="my-list">My List</div>
+      </ul>
+      <!-- search bars -->
+      <form>
+        <div id="search-bar">
+          <input class="input" id="find" type="search" placeholder="Find: tacos, dinner"><span class="asterisk_input"></span>
+          <input class="input" id="location" type="search" placeholder="Location: City, Zip Code"><span class="asterisk_input"></span>
+          <select class="input" id="sort">
+            <option value="0" selected>Best Matched</option>
+            <option value="1">Distance</option> 
+            <option value="2">Highest Rated</option> 
+          </select></br>
+          <button class="input btn btn-default" id="submit">Search</button>
+        </div>
+>>>>>>> master
       </form>
       <div class="col-sm-2"></div>
       <!-- manual add -->
@@ -55,6 +118,7 @@
         <h3>Search results:</h3>
         <ol class="list-group" id="result"></ol>
       </div>
+<<<<<<< HEAD
         
       <!-- list of selections -->
       <div class="col-sm-5" id="manual-list">
@@ -91,5 +155,16 @@
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="smoothscroll.js"></script>
     <script type="text/javascript" src="share.js"></script>
+=======
+      <!-- scroll -->
+      <div class="row" id="scroll-background">
+        <a href="#logo" type="button" id="scroll">Scroll to Top of Page</a>
+      </div>
+      <!-- javascript -->
+      <script src="app.js" type="text/javascript"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0OuluWj8gQFySi3QmUypDaUok5CCmVqM&callback=initMap"></script>
+      <script src="adder.js" type="text/javascript"></script>
+    <div>
+>>>>>>> master
   </body>
 </html>
