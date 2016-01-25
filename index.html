@@ -59,16 +59,18 @@
       <!-- list of selections -->
       <div class="col-sm-5" id="manual-list">
         <h3 id="my-list-title">My List:</h3>
-        <ul class="list-group my-list" id="restaurant-list"></ul>
+        <ul class="list-group my-list" id="restaurant-list">
+          <div id="share">
+            <!-- Twitter -->
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world">Tweet</a>
+            <!-- facbook share button -->
+            <div id="fb-root"></div>
+            <div class="fb-share-button" data-href="http://localhost:8080/" data-layout="button"></div>
+          </div>
+        </ul>
       </div>
       <div class="col-sm-1"></div>
     </div>
-
-    <!-- share list -->
-    <!-- <div class="row"> -->
-      <!-- Twitter -->
-      <!-- <a href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
-    </div> -->
 
     <!-- map -->
     <div class="row" id="map"></div>
@@ -88,5 +90,6 @@
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="smoothscroll.js"></script>
+    <script type="text/javascript" src="share.js"></script>
   </body>
 </html>
