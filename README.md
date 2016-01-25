@@ -28,6 +28,6 @@ Result item highlight function and added to list:
 
 ![highlight](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/highlight.png?raw=true)
 
-![list](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/manual-add.png?raw=true)
+![list](https://github.com/Nataliamodiano/restaurants/blob/master/images/final-screenshots/manually-add.png?raw=true)
 
 - Functionality that still needs to be built: social media share buttons. 
