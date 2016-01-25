@@ -1,25 +1,30 @@
 body {
-  background-color: #f5f5f1;
-}
-
-.container {
-  width: 1200px;
-  margin: 0px auto;
-  padding: 0px 0px 0px 0px;
-  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .row {
-  width: 1200px;
-  margin: 0px 0px 0px 0px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
-.navbar {
-  background-color: #1b0b0a;
-  padding-left: 20px;
-  border-radius: 0px;
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
+/*hero and header*/
+.hero {
+  height: 600px;
+  background-image: url(../images/burgers.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+<<<<<<< HEAD
+#hook {
+  background-color: rgba(0,0,0,.5);
+  height: 600px; 
+=======
 #search-link {
   float: right;
   color: #fff;
@@ -42,17 +47,31 @@ body {
   margin-bottom: 10px;
   color: #de1500;
   font-weight: 500;
+>>>>>>> master
 }
 
-#map { 
-  height: 500px; 
-  display: block;
-  border: 2px solid #1b0b0a;
-  margin-left: 20px;
+.hook-type {
+  color: #fff;
 }
 
-#result {
+#logo {
+  margin-top: 0px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 72px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  padding-top: 100px;
   display: block;
+<<<<<<< HEAD
+  padding: 0.2em 0.5em;
+  border: #fff solid 10px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+=======
   width: 600px; 
   height: 500px;
   overflow: auto;
@@ -60,12 +79,30 @@ body {
   padding-left: 30px;
   margin-right: 20px;
   background-color: #e8e27a;
+>>>>>>> master
+}
+
+#margin {
+  padding-top: 100px;
+}
+
+<<<<<<< HEAD
+.hook-type {
+  text-align: center;
+}
+
+/*search boxes*/
+#search-bars {
+  margin-bottom: 20px;
+}
+
+.input {
+  display: block;
 }
 
 #search-bar {
-  width: 100%;
-}
-
+  float: left;
+=======
 .input {
   width: 23%;
   border-radius: 10px;
@@ -120,24 +157,38 @@ body {
 #my-list {
   margin-top: -35px;
   margin-left: 100px;
+>>>>>>> master
 }
 
-.description {
-  font-family: 'Asar', serif;
-  text-align: center;
-  font-size: 18px;
-  color: #1b0b0a;
+.input, 
+button {
+  border-radius: 4px !important;
+  margin-top: 10px;
+  text-transform: capitalize;
 }
 
+<<<<<<< HEAD
+#add-restaurant,
+#submit {
+  background-color: #de1500;
+  color: #fff;
+  border-color: #de1500;
+=======
 #hook {
   background-color: #de1500;
   padding: 30px 0px 40px 0px;
+>>>>>>> master
 }
 
-.hook-type {
-  color: #f5f5f1;
+/*results and body*/
+#lists {
+  display: none;
 }
 
+<<<<<<< HEAD
+#result-list {
+  display: none;
+=======
 #product-description {
   padding: 30px 0px 30px 0px;
   background-color: #FFF776;
@@ -162,20 +213,36 @@ body {
   background-color: #C6BB00;
   padding-top: 20px;
   padding-bottom: 70px;
+>>>>>>> master
 }
 
-#what-is {
-  margin-bottom: 20px;
+#manual-list {
+  display: none;
 }
 
-#search {
-  padding-top: 2px;
+.center-block {
+  margin-right: 60px;
+  margin-left: 60px;
 }
 
-#view {
-  padding-top: 12px;
+#result {
+  padding: 15px 15px 15px 15px;
+  border-radius: 4px;
+  border: solid;
+  height: 400px;
+  border-color: #ddd;
+  overflow: auto; 
 }
 
+<<<<<<< HEAD
+ol > li {
+  list-style-type: upper-alpha;
+  list-style-position: inside;
+}
+
+.title {
+  text-align: center;
+=======
 #user-list {
   display: inline-block;
   font-family: 'Nunito', sans-serif;
@@ -188,14 +255,17 @@ body {
   margin-left: 50px;
   width: 30%;
   margin-top: 15px;
+>>>>>>> master
 }
 
-#locations {
-  font-family: 'Asar', serif;
-  font-size: 18px;
-  margin-bottom: 2px;
+.list-group-item {
+  display: list-item !important;
 }
 
+<<<<<<< HEAD
+ul > li > .list-group-item {
+  border-radius: 4px !important;
+=======
 .restaurants {
   font-family: 'Nunito', sans-serif;
   font-size: 24px; 
@@ -206,31 +276,59 @@ body {
   font-family: 'Nunito', sans-serif;
   font-size: 24px; 
   text-transform: capitalize;
+>>>>>>> master
 }
 
 .rating {
   float: right;
-  margin-top: 10px;
+}
+
+.highlight {
+  background-color: #FFD9A7;
 }
 
 .gray {
   color: #1b0b0a;
 }
 
+<<<<<<< HEAD
+#share {
+  display: flex;
+=======
 .btn-default {
   outline: none;
   border: 1px solid #1b0b0a;
   border-radius: 10px;
   margin-left: 5px;
   border-color: #9a9a9a;
+>>>>>>> master
 }
 
-.btn:focus, 
-.btn:active, 
-.btn:active:focus {
-  outline: none;
+.fb-share-button {
+  margin-left: 10px;
 }
 
+<<<<<<< HEAD
+/*my list*/
+.my-list {
+  padding: 15px 15px 15px 15px;
+  border-radius: 4px;
+  border: solid;
+  height: 400px;
+  border-color: #ddd;
+  overflow: auto; 
+  text-transform: capitalize;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 4px;
+  border-color: #ddd;
+}
+
+#restaurant-list {
+  list-style-type: none;
+=======
 .collapse, 
 .in {
   width: 80%;
@@ -257,25 +355,32 @@ body {
   margin-top: 10px;
   background-color: #e8e27a;
   padding: 5px 5px 5px 5px;
+>>>>>>> master
 }
 
-.highlight {
-  background-color: #afc2d2;
+#map {
+  height: 300px;
 }
 
-#off {
-  background-color: #fff;
+/*footer*/
+footer {
+  height: 60px;
+  background-image: url(../images/burgers.jpg);
+  background-position: center center;
+  background-size: cover;
 }
 
-.asterisk_input:after {
-  content:" *"; 
-  color: #de1500;
-  position: absolute; 
-  margin: 8px 0px 0px -30px; 
-  font-size: xx-large; 
-  padding: 0 5px 0 0; 
+#shaddow {
+  height: 60px;
+  background-color: rgba(0,0,0,.5);
+  padding-top: 15px;
 }
 
+<<<<<<< HEAD
+#scroll {
+  color: #fff; 
+  margin-left: 45px;
+=======
 #link {
   font-family: 'Asar', serif;
   font-size: 18px;
@@ -419,4 +524,5 @@ body {
     font-size: xx-large; 
     padding: 0 5px 0 0; 
   }
+>>>>>>> master
 }

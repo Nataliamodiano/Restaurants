@@ -4,7 +4,7 @@ submit.addEventListener('click', getApi, false);
 //initiate the map with the center of Los Angeles
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
+    zoom: 12,
     center: {lat: 34.052235, lng: -118.243683},
     scrollwheel: false
   });
@@ -63,6 +63,7 @@ function getApi(e) {
         title.setAttribute('href', name[i].mobile_url);
         title.setAttribute('id', 'restaurant');
         title.setAttribute('target', '_blank');
+        title.setAttribute('class', 'h4');
         title.textContent = name[i].name;
         //add link to li
         var addLink = document.createElement('a');
@@ -70,6 +71,7 @@ function getApi(e) {
         addLink.textContent = 'Click here to add this restaurant to your list!';
         paragraph.textContent = [' - This location has a rating of ', name[i].rating, ' stars and a review count of ', name[i].review_count, '. Address and phone number: ', name[i].location.address, '. ', name[i].location.city, ', ', name[i].display_phone, '. '].join('');
         paragraph.setAttribute('id', 'locations');
+        paragraph.setAttribute('class', 'list-group-item-text');
         //link turns gray on click
         addLink.addEventListener('click', function() {
           var link = document.getElementById('link');
@@ -80,7 +82,7 @@ function getApi(e) {
         result.appendChild(item);
         item.appendChild(title);
         item.appendChild(paragraph);
-        item.className += "new-li"; 
+        item.className += "new-li list-group-item"; 
         title.appendChild(image);
         item.appendChild(addLink);
         //get coordinates
@@ -108,21 +110,21 @@ function getApi(e) {
         google.maps.event.addListener(marker, 'mouseover', function() {
           this.setIcon(icon2);
           var restaurant = document.getElementById('marker-' + this.label);
-          restaurant.className = 'new-li highlight';
+          restaurant.className = 'new-li highlight list-group-item';
         });
         google.maps.event.addListener(marker, 'mouseout', function() {
           this.setIcon(icon1);
           var restaurant = document.getElementById('marker-' + this.label);
-          restaurant.className = 'new-li';
+          restaurant.className = 'new-li list-group-item';
         });
         //mouseover li to highlight marker and make it bounce
-        title.addEventListener('mouseover', (function(m) {
+        item.addEventListener('mouseover', (function(m) {
           return function(){
             m.setIcon(icon2);
             m.setAnimation(google.maps.Animation.BOUNCE);
           }
         })(marker), false);
-        title.addEventListener('mouseout', (function(m) {
+        item.addEventListener('mouseout', (function(m) {
           return function(){
             m.setIcon(icon1);
             m.setAnimation(null);
