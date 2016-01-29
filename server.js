@@ -6,5 +6,5 @@ app.use(express.static('./'));
 
 app.use('/yelp-api', yelp);
 
-app.listen(8080);
-console.log('server');
+var port = process.env.PORT || 8080;
+app.listen(port);
