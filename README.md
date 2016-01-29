@@ -4,6 +4,8 @@ A website for people who want to create a list of restaurants they wish to visit
 
 <hr>
 
+http://use-lets-eat.herokuapp.com/
+
 This website allows users to search for types of food or restaurants using the Yelp API. The search results then populate a list and corresponding markers drop on the map using the Google Maps API. On mouseover of either the restaurant list item or the marker, the corresponding item will be highlighted. The user can click on the link to add that list item to "My List". The user can enter a restaurant name in the input box and add that restaurant to "My List" without preforming a search. The user can then either delete the list item or add any personal notes. 
 
 Built using:
