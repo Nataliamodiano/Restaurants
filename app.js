@@ -135,7 +135,7 @@ function getApi(e) {
         alert('Make sure you entered Find and Location values');
       }
   }
-  xhr.open('GET', 'http://localhost:8080/yelp-api/' + find + '/' + location + '/' + radius + '/' + sort, true);
+  xhr.open('GET', 'https://localhost:8080/yelp-api/' + find + '/' + location + '/' + radius + '/' + sort, true);
   xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
   xhr.send(location);
 } //end of get api
