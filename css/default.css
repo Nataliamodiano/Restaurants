@@ -84,7 +84,7 @@ button {
 
 /*results and body*/
 #lists {
-  display: none;
+  visibility: hidden;
 }
 
 #result-list {
